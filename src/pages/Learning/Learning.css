@@ -1,0 +1,152 @@
+/* Learning.css */
+.my-learning {
+    font-family: Arial, sans-serif;
+    color: var(--txt-clr);
+    background-color: var(--bg-body);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.my-learning section{
+    margin-bottom: 60px;
+}
+
+.blue{
+    color: var(--color-primary);
+}
+
+.my-learning .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.my-learning .hero p {
+    max-width: 600px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.course-overview,
+.resources,
+.achievements,
+.events,
+.feedback {
+    margin-top: 2rem;
+}
+
+.course-overview h2,
+.resources h2,
+.achievements h2,
+.events h2,
+.feedback h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.course-list,
+.resource-list,
+.achievement-list,
+.event-list,
+.feedback-list {
+    display: grid;
+    gap: 20px;
+}
+
+.course-card,
+.resource-card,
+.achievement-card,
+.event-card,
+.feedback-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px var(--border-cta);
+}
+
+.resource-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.resource-text h4 {
+    margin-top: 0;
+}
+
+.achievement-card h4,
+.event-card h4 {
+    margin-top: 0;
+}
+
+.my-learning .cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.my-learning .cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.my-learning .btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.my-learning .cta-btn,
+.my-learning .cta-secondary {
+    font-size: large;
+    font-weight: 500;
+    text-align: center;
+    color: var(--bg-body);
+    background-color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid var(--color-primary);
+    padding: 10px 20px;
+    cursor: pointer;
+    letter-spacing: .2px;
+}
+
+.my-learning .cta-secondary {
+    color: var(--black);
+    background-color: var(--bg-body);
+}
+
+@media (max-width: 290px) {
+    .my-learning{
+        padding: 10px;
+    }
+    .course-card{
+        padding: 10px;
+    }
+}
+
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+
+    .my-learning{
+        padding-top: 150px;
+    }
+
+    .course-list,
+    .resource-list,
+    .achievement-list,
+    .event-list,
+    .feedback-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .course-list,
+    .resource-list,
+    .achievement-list,
+    .event-list,
+    .feedback-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

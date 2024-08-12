@@ -1,0 +1,51 @@
+// src/components/Footer/Footer.js
+import React from 'react';
+import { FaDiscord } from 'react-icons/fa';
+import './Footer.css';
+import logo from "../../assets/logo.svg";
+import { Link } from 'react-router-dom';
+
+
+const Footer = () => {
+
+  function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth', 
+    });
+    }
+
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+            <img src={logo} alt="" className='logo' width={180} />
+            <h1>LearnLab</h1>
+        </div>
+        <div className="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <Link to={"/"} onClick={scrollToTop}><li>Home</li></Link>
+            <Link to={"/typescript/"} onClick={scrollToTop}><li>Course</li></Link>
+            <Link to={"/learning/"} onClick={scrollToTop}><li>My Learning</li></Link>
+            <Link to={"/join/"} onClick={scrollToTop}><li>Join Us</li></Link>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Contact Us</h3>
+          <a href='mailto:dominik.andorka@gmail.com'>Gmail</a><br />
+          <a href='https://github.com/AndorkaDominik'>Github</a>
+        </div>
+        <div className="footer-section social-media">
+          <h3>Follow Us</h3>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer"><FaDiscord  /></a>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} LearnLab. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

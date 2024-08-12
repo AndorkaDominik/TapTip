@@ -1,0 +1,139 @@
+.navbar {
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    box-shadow: 1px 1px 5px var(--border-cta);
+    font-size: large;
+    font-weight: 500;
+    position: relative;
+    position: fixed;
+    width: 100%;
+    background: var(--bg-body);
+}
+
+.navbar .logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .logo {
+    max-height: 80px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar ul li {
+    cursor: pointer;
+    color: var(--txt-clr);
+}
+.navbar ul a {
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: max(1vw, 12px);
+}
+
+.navbar .profilePicture{
+    max-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px var(--code-title-color);
+    cursor: pointer;
+}
+
+.navbar .menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.under768px {
+    display: none;
+}
+
+
+@media (max-width: 1100px) {
+    .navbar ul {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 20px 8%;
+        position: relative;
+    }
+
+    .navbar ul {
+        background: var(--bg-body);
+        padding: 20px;
+        display: none;
+        position: absolute;
+        top: 78%;
+        left: 0;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 20px;
+        z-index: 1000;
+    }
+
+
+    .navbar ul.show {
+        display: flex;
+        border-top: 2px solid var(--black);
+        border-bottom: 2px solid var(--black);
+    }
+
+    .navbar .menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .over768px {
+        display: none;
+    }
+
+    .under768px {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 250px) {
+    .navbar .logo{
+        max-height: 50px;
+    }
+
+    .navbar .menu-btn {
+        font-size: 20px;
+    }
+
+    .under768px {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 200px) {
+    .navbar .menu-btn {
+        width: 16px;
+    }
+}

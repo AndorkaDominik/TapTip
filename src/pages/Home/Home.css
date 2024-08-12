@@ -1,0 +1,492 @@
+.landing-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    text-align: center;
+    padding: .5rem;
+    padding-top: 80px;
+}
+
+.btn-container {
+    gap: 10px;
+    display: flex;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2{
+    font-size: 25px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 500px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .invite {
+    position: relative;
+    margin-top: 50px;
+    font-size: medium;
+    padding: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.hero .invite-arrow {
+    cursor: pointer;
+    animation: movement 1s ease infinite;
+}
+
+/* -------------------------- CODE ----------------------------*/
+.welcome {
+    position: relative;
+    margin-top: 50px;
+    background-color: var(--code-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.welcome .header {
+    display: grid;
+    padding: 7px 20px;
+    background: #1e2227;
+}
+
+.header .action-btn-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.header .action-btn-container div {
+    margin-top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.header .action-btn-container div:nth-child(1) {
+    background: #FF605C;
+}
+
+.header .action-btn-container div:nth-child(2) {
+    background: #FFBD44;
+}
+
+.header .action-btn-container div:nth-child(3) {
+    background: #00CA4E;
+}
+
+.welcome .header p {
+    color: var(--code-title-color);
+    margin-bottom: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+.welcome img {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    /* Ensure image maintains aspect ratio */
+}
+
+@keyframes movement {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------------- Why ----------------------------*/
+
+.hero .why-container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* -------------------------- Need ----------------------------*/
+
+.need {
+    margin-top: 80px;
+    text-align: left;
+    width: 100%;
+}
+
+.need h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.need .top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.need .top .card,
+.need .bottom .card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 15px 15px 45px #bebebe,
+        -10px -10px 40px #dcdcdc;
+}
+
+.need .top .card p,
+.need .bottom .card p {
+    margin: 0;
+}
+
+.need .text {
+    padding: 15px;
+}
+
+.need .top div img {
+    width: 100%;
+    aspect-ratio: 1 / 0.8;
+}
+
+.need .bottom {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.need .bottom div img {
+    width: 100%;
+    height: 350px;
+}
+
+/* -------------------------- Showcase ----------------------------*/
+.showcase{
+    display: grid;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 150px;
+}
+.showcase h2 {
+    margin-top: 70px;
+}
+.showcase-content{
+    display: grid;
+    margin: 0 auto;
+}
+.showcase p:nth-child(3){
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    opacity: .7;
+}
+.showcase .logo-container {
+    position: relative;
+    width: 180px;
+    margin: 0 auto;
+}
+.showcase .logo-container div{
+    position: absolute;
+    background: #f5f5f5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 15px 45px #bebebe,
+        -10px -10px 40px #dcdcdc;
+}
+
+.showcase .logo-container div:nth-child(1) {
+    top: -10px;
+    right: 160px;
+}
+.showcase .logo-container div:nth-child(2) {
+    top: -30px;
+    right: 115px;
+}
+
+.showcase .logo-container div:nth-child(3) {
+    top: -40px;
+    right: 70px;
+}
+
+.showcase .logo-container div:nth-child(4) {
+    top: -30px;
+    right: 25px;
+}
+.showcase .logo-container div:nth-child(5) {
+    top: -10px;
+    right: -20px;
+}
+
+.showcase .logo-container img{
+    width: 25px;
+}
+
+/* Showcase content */
+.showcase-content{
+    display: grid;
+}
+.showcase-content .card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.showcase-content .card {
+    box-shadow: 15px 15px 70px #cbcbcb,
+        -10px -10px 70px #e1e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.showcase .card .top{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    border: 1px solid var(--border-cta);
+    padding: 30px 80px;
+}
+.showcase .card .top:nth-child(1) img{
+    float: right;
+}
+.showcase .card .bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f9fafc;
+    gap: 10px;
+}
+.showcase .card .bottom div{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+    border: 1px solid var(--border-cta);
+}
+
+.showcase .card .bottom div p {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: medium;
+}
+.showcase .card .bottom div b {
+    text-align: right;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.showcase .card img{
+    box-shadow: 15px 15px 45px #bebebe,
+        -10px -10px 40px #ffffff;
+    width: 70px;
+    border: 1px solid var(--border-cta);
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero h2{
+        max-width: 90%;
+    }
+
+    .hero .why-container {
+        grid-template-columns: .6fr 1fr;
+        gap: 50px;
+    }
+
+    .need .top {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .need .bottom {
+        grid-template-columns: 1fr 0.7fr;
+    }
+    .showcase-content .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .showcase .logo-container {
+        width: 300px;
+    }
+
+    .showcase .logo-container div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .showcase .logo-container div:nth-child(1) {
+        top: -10px;
+        right: 260px;
+    }
+
+    .showcase .logo-container div:nth-child(2) {
+        top: -40px;
+        right: 200px;
+    }
+
+    .showcase .logo-container div:nth-child(3) {
+        top: -50px;
+        right: 130px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .showcase .logo-container div:nth-child(3) img {
+        width: 35px;
+    }
+
+    .showcase .logo-container div:nth-child(4) {
+        top: -40px;
+        right: 60px;
+    }
+
+    .showcase .logo-container div:nth-child(5) {
+        top: -10px;
+        right: 0px;
+    }
+
+        .showcase .logo-container img {
+            width: 30px;
+        }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        padding-top: 180px;
+    }
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .need .top .card,
+    .need .bottom .card {
+        max-height: none;
+    }
+
+    .showcase-content .card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    .hero:nth-child(1) p{
+        max-width: 400px;
+    }
+
+    .hero .invite {
+        font-size: small;
+        padding: 10px;
+    }
+
+    .need h2 {
+        text-align: center;
+    }
+
+    .need .top {
+        grid-template-columns: 1fr;
+    }
+
+    .need .bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 370px){
+    .showcase .card .top{
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 274px) {
+    .showcase .card .bottom div p{
+        text-align: center;
+    }
+    .showcase .card .bottom div{
+        flex-direction: column;
+        height: fit-content;
+        gap: 10px;
+    }
+
+    .showcase .card .top img {
+        width: 50px;
+        padding: 12px;
+        }
+
+}
+
+@media (max-width: 274px) {
+    .logo-container{
+        display: none;
+    }
+    .showcase{
+        margin-top: 0;
+    }
+}
