@@ -1,4 +1,6 @@
-# LearnLab
+<h1 align="center">
+LearnLab
+</h1>
 
 ![LearnLab preview](./.github/preview.png)
 
