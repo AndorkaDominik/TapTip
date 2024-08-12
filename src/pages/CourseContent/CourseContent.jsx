@@ -31,8 +31,9 @@ const CourseContent = ({courseData, module }) => {
       console.log(completedModules1);
     };
 
+    // testing
     // Update immediately when component mounts
-    updateCompletedModules();
+    // updateCompletedModules();
 
     // Set up the interval to update every minute (60000 milliseconds)
     const intervalId = setInterval(() => {
