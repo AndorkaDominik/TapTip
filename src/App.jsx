@@ -10,8 +10,9 @@ import Course from './pages/Course/Course.jsx';
 import { courseData } from './constants/data'
 import CourseContent from './pages/CourseContent/CourseContent.jsx';
 import Learning from './pages/Learning/Learning.jsx';
-import { Route, Routes } from 'react-router-dom'
 import Join from './pages/Join/Join.jsx';
+
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
 
