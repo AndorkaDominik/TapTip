@@ -5,10 +5,18 @@ import './Learning.css';
 import { FaCircleCheck } from "react-icons/fa6";
 import { FaRegCircle } from "react-icons/fa";
 
+import { FaStar } from "react-icons/fa";
+import { FaRegStar } from "react-icons/fa";
+import { motion } from 'framer-motion';
+
+import { BiLogoTypescript } from "react-icons/bi";
+
+
+
 const feedback = [
-  { user: "Alice", comment: "The React course was incredibly insightful and well-structured!" },
-  { user: "Bob", comment: "I loved the advanced JavaScript techniques covered in the course." },
-  { user: "Charlie", comment: "CSS Grid and Flexbox section was very helpful and practical." }
+  { user: "Alice", comment: "This course made transitioning from React to TypeScript effortless. The clear, step-by-step guidance was perfect for self-learning!", star: 5},
+  { user: "Bob", comment: "Learning at my own pace was great, and the practical examples made TypeScript much easier to grasp for React developers like me.", star: 4},
+  { user: "Charlie", comment: "The course was well-organized and intuitive, making it easy to integrate TypeScript into my React projects. Worth every minute!", star: 5}
 ];
 
 const initialCourses = [
@@ -76,12 +84,29 @@ const MyLearning = () => {
  
   return (
     <div className="my-learning">
-      <h1>My <span>Learning Progress</span></h1>
-      <p>Track your learning journey and explore new resources to enhance your skills.</p>
+       <motion.h1 
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        My <span>Learning Progress</span>
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        Track your learning journey and explore new resources to enhance your skills.
+      </motion.p>
 
-      <section className="course-overview">
-        <h2>Your Courses</h2>
-        <h3>Typescript</h3>
+      <motion.section 
+        className="course-overview" 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <h2>Your <span>Courses</span></h2>
+        <h3><BiLogoTypescript />Typescript</h3>
         <div className="course-list">
           {courses.map(course => (
             <div key={course.id} className="course-card">
@@ -91,15 +116,20 @@ const MyLearning = () => {
           ))}
         </div>
         <button onClick={resetModules} className="cta">Reset modules</button>
-      </section>
+      </motion.section>
 
       
       <section className="feedback">
-        <h2>User Feedback</h2>
+        <h2>User <span>Feedback</span></h2>
         <div className="feedback-list">
           {feedback.map((item, index) => (
             <div key={index} className="feedback-card">
-              <p><strong>{item.user}</strong>: {item.comment}</p>
+              <div className="stars">
+                {Array.from({ length: 5 }, (_, i) => 
+                  i < item.star ? <FaStar key={i} /> : <FaRegStar key={i} />
+                )}
+              </div>
+              <p><strong>{item.user}</strong>: <br /> {item.comment}</p>
             </div>
           ))}
         </div>

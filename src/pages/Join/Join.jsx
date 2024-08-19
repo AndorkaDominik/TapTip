@@ -1,18 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Join.css"
 import { Link } from 'react-router-dom';
 import discordLogo from '../../assets/Logos/discord.svg';
 import communityImg from '../../assets/community.png';
 import logo from "../../assets/logo.svg";
+import { IoLogoDiscord } from "react-icons/io5";
+import { motion } from 'framer-motion';
+
+
 
 const Join = () => {
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const faqs = [
+    { question: "Is this community free to join?", answer: "Yes, joining our community on Discord is completely free. We welcome developers of all levels to participate." },
+    { question: "What if I’m new to programming?", answer: "No worries! Our community is very supportive, and we have resources specifically for beginners." },
+    { question: "How active is the community?", answer: "Our community is very active with members from around the globe, so you'll always find someone online to chat with or collaborate on projects." },
+    { question: "Can I contribute to the community?", answer: "Absolutely! We encourage members to share their knowledge, contribute to discussions, and even lead their own sessions or projects." },
+    { question: "How do I stay updated on community activities?", answer: "We have announcement channels where we post updates about upcoming events, new resources, and important community news." },
+  ];
+
   return (
         <div className="join-community-page">
           <section className="intro-section">
             <div className="intro-content">
-              <h1>Join Our <span>Developer Community</span> on Discord</h1>
-              <p>Connect, collaborate, and grow with fellow developers in our vibrant Discord community. Whether you're a seasoned pro or just starting, you'll find valuable resources, support, and friendships here.</p>
-              <img src={communityImg} alt="Community" draggable="false" />
+              <motion.h1 
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                Join Our <span>Developer Community</span> on Discord
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}>
+                  Connect, collaborate, and grow with fellow developers in our vibrant Discord community. Whether you're a seasoned pro or just starting, you'll find valuable resources, support, and friendships here.
+              </motion.p>
+              <motion.img 
+                src={communityImg} 
+                alt="Community" 
+                draggable="false"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.6 }}
+                />
             </div>
           </section>
 
@@ -41,7 +78,7 @@ const Join = () => {
 
           {/* How to Get Started Section */}
           <section className="get-started-section">
-            <h2>How to <span>Get Started</span> </h2>
+            <h2><IoLogoDiscord /> How to <span>Get Started </span> </h2>
             <p>Joining is easy! Just follow these steps:</p>
             <ol>
               <li><strong>Sign Up:</strong> If you don't already have a Discord account, create one for free.</li>
@@ -76,24 +113,27 @@ const Join = () => {
 
 
           {/* FAQs Section */}
+          
+
           <section className="faqs-section">
             <h2><span>F</span>requently <span>A</span>sked <span>Q</span>uestions</h2>
             <div className="faqs-container">
-              <div className="faq-item">
-                <h4>Is this community free to join?</h4>
-                <p>Yes, joining our community on Discord is completely free. We welcome developers of all levels to participate.</p>
-              </div>
-              <div className="faq-item">
-                <h4>What if I’m new to programming?</h4>
-                <p>No worries! Our community is very supportive, and we have resources specifically for beginners.</p>
-              </div>
-              <div className="faq-item">
-                <h4>How active is the community?</h4>
-                <p>Our community is very active with members from around the globe, so you'll always find someone online to chat with or collaborate on projects.</p>
-              </div>
+              {faqs.map((faq, index) => (
+                <div key={index} className="faq-item">
+                  <h4 onClick={() => toggleFAQ(index)} className="faq-question">
+                    {faq.question}
+                    <span className={`faq-toggle-icon ${activeIndex === index ? 'open' : ''}`}>
+                      {activeIndex === index ? '-' : '+'}
+                    </span>
+                  </h4>
+                  <p className={`faq-answer ${activeIndex === index ? 'open' : ''}`}>
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
             </div>
           </section>
-        </div>
+    </div>
   )
 }
 

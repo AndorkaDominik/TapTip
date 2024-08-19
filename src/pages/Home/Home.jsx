@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 
 import welcomeImg from '../../assets/welcome (2).png'
@@ -80,18 +81,56 @@ const Home = () => {
   return (
     <div className="landing-page">
       <section className="hero">
-        <h1>Transform Your React <br /> Skills with <span>TypeScript</span></h1>
-        <p>Join our comprehensive course to master TypeScript in React and build robust, type-safe applications.</p>
-        <div className="btn-container">
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Transform Your React <br /> Skills with <span>TypeScript</span>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          Join our comprehensive course to master TypeScript in React and build robust, type-safe applications.
+        </motion.p>
+         <motion.div 
+          className="btn-container"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+        >
           <Link to="/typescript/" onClick={scrollToTop} className="cta">Get Started</Link>
           <Link to="/join/" onClick={scrollToTop} className="cta-secondary">Join Us</Link>
-        </div>
-        <a className='invite' onClick={handleScroll}>Learn more</a>
-        <MdKeyboardArrowDown className='invite-arrow' onClick={handleScroll}/>
+        </motion.div>
+        <motion.a 
+          className='invite' 
+          onClick={handleScroll}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          Learn more
+        </motion.a>
+        <motion.div 
+          className='invite-arrow'
+          onClick={handleScroll}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <MdKeyboardArrowDown />
+        </motion.div>
 
 
 
-        <div className="welcome">
+        <motion.div 
+          className="welcome"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+        >
           <div className='header'>
             <div className='action-btn-container'>
               <div></div>
@@ -99,17 +138,17 @@ const Home = () => {
               <div></div>
             </div>
             <p><Typewriter
-            words={['React.jsx','TypeScript.tsx' ]}
-            loop={5}
-            cursor
-            cursorStyle='_'
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          /></p>
+              words={['React.jsx','TypeScript.tsx' ]}
+              loop={5}
+              cursor
+              cursorStyle='_'
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={900}
+            /></p>
           </div>
           <img src={welcomeImg} alt="" draggable="false"/>
-        </div>
+        </motion.div>
 
 
         <div className='why-container'>

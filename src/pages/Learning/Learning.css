@@ -12,6 +12,11 @@
     margin-bottom: 60px;
 }
 
+.my-learning h3{
+    display: flex;
+    align-items: center;
+}
+
 .blue{
     color: var(--color-primary);
 }
@@ -114,12 +119,27 @@
     background-color: var(--bg-body);
 }
 
+.feedback-card{
+    position: relative;
+}
+
+.stars{
+    color: #FFD250;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
 @media (max-width: 290px) {
     .my-learning{
         padding: 10px;
     }
     .course-card{
         padding: 10px;
+    }
+
+    .stars {
+        position: static;
     }
 }
 

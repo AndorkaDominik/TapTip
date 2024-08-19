@@ -4,6 +4,7 @@ import { FaDiscord } from 'react-icons/fa';
 import './Footer.css';
 import logo from "../../assets/logo.svg";
 import { Link } from 'react-router-dom';
+import { IoLogoGithub } from "react-icons/io";
 
 
 const Footer = () => {
@@ -38,6 +39,7 @@ const Footer = () => {
         </div>
         <div className="footer-section social-media">
           <h3>Follow Us</h3>
+          <a href="https://github.com/AndorkaDominik" target="_blank" rel="noopener noreferrer"><IoLogoGithub /></a>
           <a href="https://discord.com" target="_blank" rel="noopener noreferrer"><FaDiscord  /></a>
         </div>
       </div>
