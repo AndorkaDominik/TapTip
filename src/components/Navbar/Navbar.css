@@ -32,9 +32,14 @@
 .navbar ul li {
     cursor: pointer;
     color: var(--txt-clr);
+    transition: color .2s linear;
 }
 .navbar ul a {
     text-decoration: none;
+}
+
+.navbar ul li:hover{
+    color: var(--color-primary);
 }
 
 .nav-right {

@@ -21,13 +21,14 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
             <img src={logo} alt="" className='logo' width={180} />
-            <h1>LearnLab</h1>
+            <h1>LearnJava</h1>
         </div>
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
             <Link to={"/"} onClick={scrollToTop}><li>Home</li></Link>
-            <Link to={"/typescript/"} onClick={scrollToTop}><li>Course</li></Link>
+            <Link to={"/Java/"} onClick={scrollToTop}><li>Course</li></Link>
+            <Link to={"/practise/"} onClick={scrollToTop}><li>Practise</li></Link>
             <Link to={"/learning/"} onClick={scrollToTop}><li>My Learning</li></Link>
             <Link to={"/join/"} onClick={scrollToTop}><li>Join Us</li></Link>
           </ul>

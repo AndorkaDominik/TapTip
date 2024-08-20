@@ -19,6 +19,16 @@ const CourseContent = ({courseData, module }) => {
           "module3": false,
           "module4": false,
           "module5": false,
+          "module6": false,
+          "module7": false,
+          "module8": false,
+          "module9": false,
+          "module10": false,
+          "module11": false,
+          "module12": false,
+          "module13": false,
+          "module14": false,
+          "module15": false,
         };
       }
 
@@ -31,19 +41,42 @@ const CourseContent = ({courseData, module }) => {
       console.log(completedModules1);
     };
 
+    const updateCompletedProjects = () => {
+      let completedProjects = JSON.parse(localStorage.getItem('completedProjects'));
+
+      // If 'completedProjects' doesn't exist, initialize it
+      if (!completedProjects) {
+        completedProjects = {
+          "project1": false,
+          "project2": false,
+          "project3": false,
+          "project4": false,
+          "project5": false,
+        };
+      }
+
+      // Set the current module to true
+      completedProjects[module] = true;
+      // Update the completedProjects in localStorage
+      localStorage.setItem('completedProjects', JSON.stringify(completedProjects));
+
+      let completedProjects1 = JSON.parse(localStorage.getItem('completedProjects'));
+      console.log(completedProjects1);
+    };
+
     // testing
     // Update immediately when component mounts
-    // updateCompletedModules();
+    updateCompletedModules();
+    updateCompletedProjects();
 
     // Set up the interval to update every minute (60000 milliseconds)
     const intervalId = setInterval(() => {
       updateCompletedModules();
     }, 60000); // 60000 milliseconds = 1 minute
-
+    
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
     }, []);
-
 
   const copyToClipboard = (text, index) => {
     navigator.clipboard.writeText(text)

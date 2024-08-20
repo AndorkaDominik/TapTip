@@ -26,7 +26,6 @@ const Navbar = () => {
     }
 
     function handleLinkClick() {
-        closeNavbar();
         scrollToTop();
         closeNavbar();
     }
@@ -40,17 +39,18 @@ const Navbar = () => {
             {isNavOpen && <FaTimes className="menu-btn" onClick={showNavbar} />}
                 <ul className={isNavOpen ? 'show' : ''} ref={navRef}>
                     <Link to={"/"} onClick={handleLinkClick}><li>Home</li></Link>
-                    <Link to={"/typescript/"} onClick={handleLinkClick}><li>Course</li></Link>
+                    <Link to={"/Java/"} onClick={handleLinkClick}><li>Course</li></Link>
+                    <Link to={"/practise/"} onClick={handleLinkClick}><li>Practise</li></Link>
                     <Link to={"/learning/"} onClick={handleLinkClick}><li>My Learning</li></Link>
                     <Link to={"/join/"} onClick={handleLinkClick}><li>Join Us</li></Link>
                     <div className="under768px">
                         {/* <img src={profilePicture} className='profilePicture' alt="" /> */}
-                        <Link to="/typescript/" className="cta">Get Started</Link>
+                        <Link to="/Java/" className="cta" onClick={handleLinkClick}>Get Started</Link>
 
                     </div>
                 </ul>
                 <div className="nav-right over768px">
-                    <Link to="/typescript/" className="cta">Get Started</Link>
+                    <Link to="/Java/" className="cta" onClick={handleLinkClick}>Get Started</Link>
                     {/* <img src={profilePicture} className='profilePicture' alt="" /> */}
                 </div>
                 

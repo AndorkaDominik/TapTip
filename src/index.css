@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-primary: #2b6ed9;
+  --color-primary: #E76F00;
   --color-secondary: hsl(217, 30%, 12%);
   --color-tertiary: hsl(214, 29%, 17%);
   --color-extra: hsl(225, 18%, 37%);
@@ -47,7 +47,7 @@ h1 span,
 h2 span,
 h3 span,
 h4 span {
-  background: -webkit-linear-gradient(#2b6ed9, #215ab5, #2f7dfa);
+  background: -webkit-linear-gradient( #E76F00, #E76F00, #5382A1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -124,9 +124,10 @@ pre {
 .separator{
   margin: 80px 0;
   max-width: 900px;
-  background: -webkit-linear-gradient(#2b6ed9, #215ab5, #2f7dfa);  height: 3px;
+  background: -webkit-linear-gradient(#E76F00, #E76F00, #E76F00);  
+  height: 3px;
   border-radius: 50%;
-  box-shadow: 0px 0px 10px #1b488f;
+  box-shadow: 0px 0px 10px #E76F00;
   width: 80%;
 }
 .align {
