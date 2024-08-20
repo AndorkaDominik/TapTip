@@ -72,6 +72,8 @@ const CourseContent = ({courseData, module }) => {
     // Set up the interval to update every minute (60000 milliseconds)
     const intervalId = setInterval(() => {
       updateCompletedModules();
+      updateCompletedProjects();
+
     }, 60000); // 60000 milliseconds = 1 minute
     
     // Clean up the interval on component unmount
