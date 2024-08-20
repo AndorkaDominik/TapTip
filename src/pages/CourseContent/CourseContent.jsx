@@ -9,7 +9,14 @@ const CourseContent = ({courseData, module }) => {
   useEffect(() => {
     // Function to update the localStorage
     const updateCompletedModules = () => {
-      let completedModules = JSON.parse(localStorage.getItem('completedModules'));
+      let completedModules;
+
+      try {
+        completedModules = JSON.parse(localStorage.getItem('completedModules'));
+      } catch (error) {
+        console.error("Error parsing completedModules from localStorage", error);
+        completedProjects = null;
+      }
 
       // If 'completedModules' doesn't exist, initialize it
       if (!completedModules) {
@@ -37,12 +44,22 @@ const CourseContent = ({courseData, module }) => {
       // Update the completedModules in localStorage
       localStorage.setItem('completedModules', JSON.stringify(completedModules));
 
-      let completedModules1 = JSON.parse(localStorage.getItem('completedModules'));
-      console.log(completedModules1);
+      try {
+        localStorage.setItem('completedModules', JSON.stringify(completedModules));
+      } catch (error) {
+        console.error("Error setting completedModules in localStorage", error);
+      }
     };
 
     const updateCompletedProjects = () => {
-      let completedProjects = JSON.parse(localStorage.getItem('completedProjects'));
+      let completedProjects;
+
+      try {
+        completedProjects = JSON.parse(localStorage.getItem('completedProjects'));
+      } catch (error) {
+        console.error("Error parsing completedProjects from localStorage", error);
+        completedProjects = null;
+      }
 
       // If 'completedProjects' doesn't exist, initialize it
       if (!completedProjects) {
@@ -58,10 +75,11 @@ const CourseContent = ({courseData, module }) => {
       // Set the current module to true
       completedProjects[module] = true;
       // Update the completedProjects in localStorage
-      localStorage.setItem('completedProjects', JSON.stringify(completedProjects));
-
-      let completedProjects1 = JSON.parse(localStorage.getItem('completedProjects'));
-      console.log(completedProjects1);
+      try {
+        localStorage.setItem('completedProjects', JSON.stringify(completedProjects));
+      } catch (error) {
+        console.error("Error setting completedProjects in localStorage", error);
+      }
     };
 
     // testing
