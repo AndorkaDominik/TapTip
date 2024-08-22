@@ -84,6 +84,7 @@ const Home = () => {
         "module13": false,
         "module14": false,
         "module15": false,
+        "module16": false,
       }));
     }
     if (!localStorage.getItem('completedProjects')) {

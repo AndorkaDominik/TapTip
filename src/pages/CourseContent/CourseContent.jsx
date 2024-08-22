@@ -36,6 +36,7 @@ const CourseContent = ({courseData, module }) => {
           "module13": false,
           "module14": false,
           "module15": false,
+          "module16": false,
         };
       }
 

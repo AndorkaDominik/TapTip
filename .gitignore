@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+#modules
+none.txt
+backup15.js
+backup16.js

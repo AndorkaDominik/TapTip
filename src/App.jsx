@@ -39,6 +39,7 @@ function App() {
         <Route path="/Java/module13" element={<CourseContent courseData={courseData.module13} module={"module13"} />} />
         <Route path="/Java/module14" element={<CourseContent courseData={courseData.module14} module={"module14"} />} />
         <Route path="/Java/module15" element={<CourseContent courseData={courseData.module15} module={"module15"} />} />
+        <Route path="/Java/module16" element={<CourseContent courseData={courseData.module16} module={"module16"} />} />
 
         <Route path="/practise/" element={<Practise />} />
         <Route path="/practise/project1" element={<CourseContent courseData={courseData.project1} module={"project1"} />} />

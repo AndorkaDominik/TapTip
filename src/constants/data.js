@@ -1053,412 +1053,411 @@ public class BankAccount {
 }`,
     },
   ],
-
- module4: [
-    {
-      type: 'margin'
-    },
-    {
-      type: "header",
-      level: 2,
-      text: "Module 4: Data Structures in Java",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 4.1: Arrays",
-    },
-    {
-      type: "point",
-      text: "Creating and using arrays in Java.",
-    },
-    {
-      type: "example",
-      code: `// Array example
-public class ArrayExample {
-  public static void main(String[] args) {
-    int[] numbers = {1, 2, 3, 4, 5}; // Array declaration and initialization
-    for (int number : numbers) {
-      System.out.println(number);
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Multi-dimensional arrays.",
-    },
-    {
-      type: "example",
-      code: `// Multi-dimensional array example
-public class MultiArrayExample {
-  public static void main(String[] args) {
-    int[][] matrix = {
-      {1, 2, 3},
-      {4, 5, 6},
-      {7, 8, 9}
-    };
-
-    for (int i = 0; i < matrix.length; i++) {
-      for (int j = 0; j < matrix[i].length; j++) {
-        System.out.print(matrix[i][j] + " ");
+  module4: [
+      {
+        type: 'margin'
+      },
+      {
+        type: "header",
+        level: 2,
+        text: "Module 4: Data Structures in Java",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 4.1: Arrays",
+      },
+      {
+        type: "point",
+        text: "Creating and using arrays in Java.",
+      },
+      {
+        type: "example",
+        code: `// Array example
+  public class ArrayExample {
+    public static void main(String[] args) {
+      int[] numbers = {1, 2, 3, 4, 5}; // Array declaration and initialization
+      for (int number : numbers) {
+        System.out.println(number);
       }
-      System.out.println();
     }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Common array operations (sorting, searching).",
-    },
-    {
-      type: "example",
-      code: `import java.util.Arrays;
+  }`,
+      },
+      {
+        type: "point",
+        text: "Multi-dimensional arrays.",
+      },
+      {
+        type: "example",
+        code: `// Multi-dimensional array example
+  public class MultiArrayExample {
+    public static void main(String[] args) {
+      int[][] matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+      };
 
-public class ArrayOperations {
-  public static void main(String[] args) {
-    int[] numbers = {5, 3, 8, 1, 2};
-    
-    // Sorting array
-    Arrays.sort(numbers);
-    System.out.println("Sorted array: " + Arrays.toString(numbers)); // Output: [1, 2, 3, 5, 8]
-
-    // Searching in array
-    int index = Arrays.binarySearch(numbers, 3);
-    System.out.println("Index of 3: " + index); // Output: Index of 3: 2
-  }
-}`,
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 4.2: ArrayLists",
-    },
-    {
-      type: "point",
-      text: "Using ArrayLists for dynamic arrays in Java.",
-    },
-    {
-      type: "example",
-      code: `// ArrayList example
-import java.util.ArrayList;
-
-public class ArrayListExample {
-  public static void main(String[] args) {
-    ArrayList<String> list = new ArrayList<>();
-    list.add("Apple");
-    list.add("Banana");
-    list.add("Cherry");
-
-    for (String fruit : list) {
-      System.out.println(fruit);
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Common operations on ArrayLists (adding, removing, searching).",
-    },
-    {
-      type: "example",
-      code: `import java.util.ArrayList;
-
-public class ArrayListOperations {
-  public static void main(String[] args) {
-    ArrayList<String> list = new ArrayList<>();
-    list.add("Apple");
-    list.add("Banana");
-    list.add("Cherry");
-
-    // Removing an element
-    list.remove("Banana");
-    System.out.println("List after removal: " + list); // Output: [Apple, Cherry]
-
-    // Searching for an element
-    boolean hasApple = list.contains("Apple");
-    System.out.println("Contains Apple: " + hasApple); // Output: Contains Apple: true
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "ArrayList vs Array: When to use which?",
-    },
-    {
-      type: "text",
-      text: `Arrays are of fixed size, meaning once created, their size cannot be changed. They are more efficient in terms of memory and performance, especially when the size of the data structure is known in advance. On the other hand, ArrayLists are dynamic and can grow or shrink as needed, making them more flexible but slightly less performant due to the overhead of resizing the underlying array. Use Arrays when dealing with a fixed number of elements and ArrayLists when the number of elements can change over time.`,
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 4.3: LinkedLists",
-    },
-    {
-      type: "point",
-      text: "Understanding LinkedLists and their usage in Java.",
-    },
-    {
-      type: "example",
-      code: `// LinkedList example
-import java.util.LinkedList;
-
-public class LinkedListExample {
-  public static void main(String[] args) {
-    LinkedList<String> list = new LinkedList<>();
-    list.add("Red");
-    list.add("Green");
-    list.add("Blue");
-
-    for (String color : list) {
-      System.out.println(color);
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Comparing LinkedList with ArrayList.",
-    },
-    {
-      type: "text",
-      text: `LinkedLists are better suited for scenarios where frequent insertion and deletion of elements are required, as they can be done in constant time O(1). However, they have a higher memory overhead due to the need for storing references to the next and previous elements. On the other hand, ArrayLists offer faster access time O(1) for getting elements by index but have slower performance for insertion and deletion operations, especially in the middle of the list, since elements need to be shifted.`,
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 4.4: HashMaps",
-    },
-    {
-      type: "point",
-      text: "Using HashMaps to store key-value pairs in Java.",
-    },
-    {
-      type: "example",
-      code: `// HashMap example
-import java.util.HashMap;
-
-public class HashMapExample {
-  public static void main(String[] args) {
-    HashMap<String, Integer> map = new HashMap<>();
-    map.put("Alice", 25);
-    map.put("Bob", 30);
-    map.put("Charlie", 35);
-
-    // Accessing value by key
-    System.out.println("Alice's age: " + map.get("Alice")); // Output: Alice's age: 25
-
-    // Iterating over keys and values
-    for (String name : map.keySet()) {
-      System.out.println(name + ": " + map.get(name));
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Handling collisions in HashMaps.",
-    },
-    {
-      type: "text",
-      text: `In a HashMap, collisions occur when multiple keys hash to the same index. Java handles collisions by storing multiple key-value pairs in a linked list at the same bucket (index). In the case of many collisions, this can degrade the performance of the HashMap from O(1) to O(n). Java 8 introduced a change where, after a threshold, the list at each bucket is replaced with a balanced tree, improving the worst-case performance to O(log n).`,
-    },
-    {
-      type: "point",
-      text: "Using LinkedHashMap for ordered key-value pairs.",
-    },
-    {
-      type: "example",
-      code: `// LinkedHashMap example
-import java.util.LinkedHashMap;
-
-public class LinkedHashMapExample {
-  public static void main(String[] args) {
-    LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
-    map.put("Apple", 1);
-    map.put("Banana", 2);
-    map.put("Cherry", 3);
-
-    // Maintaining insertion order
-    for (String key : map.keySet()) {
-      System.out.println(key + ": " + map.get(key));
-    }
-  }
-}`,
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 4.5: Stacks and Queues",
-    },
-    {
-      type: "point",
-      text: "Understanding the Stack data structure and its usage in Java.",
-    },
-    {
-      type: "example",
-      code: `// Stack example
-import java.util.Stack;
-
-public class StackExample {
-  public static void main(String[] args) {
-    Stack<String> stack = new Stack<>();
-    stack.push("First");
-    stack.push("Second");
-    stack.push("Third");
-
-    // Popping elements from the stack
-    while (!stack.isEmpty()) {
-      System.out.println(stack.pop());
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Understanding the Queue data structure and its usage in Java.",
-    },
-    {
-      type: "example",
-      code: `// Queue example
-import java.util.LinkedList;
-import java.util.Queue;
-
-public class QueueExample {
-  public static void main(String[] args) {
-    Queue<String> queue = new LinkedList<>();
-    queue.add("First");
-    queue.add("Second");
-    queue.add("Third");
-
-    // Polling elements from the queue
-    while (!queue.isEmpty()) {
-      System.out.println(queue.poll());
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Deque as a double-ended queue.",
-    },
-    {
-      type: "example",
-      code: `// Deque example
-import java.util.ArrayDeque;
-import java.util.Deque;
-
-public class DequeExample {
-  public static void main(String[] args) {
-    Deque<String> deque = new ArrayDeque<>();
-    
-    // Adding elements to both ends
-    deque.addFirst("First");
-    deque.addLast("Second");
-    deque.addLast("Third");
-    
-    // Removing elements from both ends
-    System.out.println("Removed from front: " + deque.removeFirst());
-    System.out.println("Removed from end: " + deque.removeLast());
-    
-    // Displaying remaining elements
-    System.out.println("Remaining elements: " + deque);
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Choosing between Stack, Queue, and Deque based on use cases.",
-    },
-    {
-      type: "text",
-      text: `- **Stack**: A last-in, first-out (LIFO) data structure. Use when you need to keep track of data in a reverse order, like in undo functionality.
-- **Queue**: A first-in, first-out (FIFO) data structure. Use when you need to process elements in the order they were added, such as task scheduling.
-- **Deque**: A double-ended queue that allows insertion and removal from both ends. Use when you need flexibility to add and remove elements from either end efficiently, like in a sliding window algorithm.`,
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 4.6: Trees and Graphs",
-    },
-    {
-      type: "point",
-      text: "Introduction to Tree data structures.",
-    },
-    {
-      type: "example",
-      code: `// Basic Tree Node example
-public class TreeNode {
-  int value;
-  TreeNode left;
-  TreeNode right;
-
-  public TreeNode(int value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-
-  public static void main(String[] args) {
-    TreeNode root = new TreeNode(1);
-    root.left = new TreeNode(2);
-    root.right = new TreeNode(3);
-
-    System.out.println("Root value: " + root.value); // Output: Root value: 1
-    System.out.println("Left child value: " + root.left.value); // Output: Left child value: 2
-    System.out.println("Right child value: " + root.right.value); // Output: Right child value: 3
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Introduction to Graph data structures.",
-    },
-    {
-      type: "example",
-      code: `// Basic Graph example using adjacency list
-import java.util.ArrayList;
-import java.util.List;
-
-public class GraphExample {
-  private List<List<Integer>> adjList;
-
-  public GraphExample(int vertices) {
-    adjList = new ArrayList<>();
-    for (int i = 0; i < vertices; i++) {
-      adjList.add(new ArrayList<>());
-    }
-  }
-
-  public void addEdge(int v, int w) {
-    adjList.get(v).add(w);
-    adjList.get(w).add(v); // For undirected graph
-  }
-
-  public void printGraph() {
-    for (int i = 0; i < adjList.size(); i++) {
-      System.out.print("Vertex " + i + ": ");
-      for (Integer edge : adjList.get(i)) {
-        System.out.print(edge + " ");
+      for (int i = 0; i < matrix.length; i++) {
+        for (int j = 0; j < matrix[i].length; j++) {
+          System.out.print(matrix[i][j] + " ");
+        }
+        System.out.println();
       }
-      System.out.println();
     }
-  }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Common array operations (sorting, searching).",
+      },
+      {
+        type: "example",
+        code: `import java.util.Arrays;
 
-  public static void main(String[] args) {
-    GraphExample graph = new GraphExample(5);
-    graph.addEdge(0, 1);
-    graph.addEdge(0, 4);
-    graph.addEdge(1, 2);
-    graph.addEdge(1, 3);
-    graph.addEdge(2, 4);
+  public class ArrayOperations {
+    public static void main(String[] args) {
+      int[] numbers = {5, 3, 8, 1, 2};
+      
+      // Sorting array
+      Arrays.sort(numbers);
+      System.out.println("Sorted array: " + Arrays.toString(numbers)); // Output: [1, 2, 3, 5, 8]
 
-    graph.printGraph();
-  }
-}`,
-    },
-],
+      // Searching in array
+      int index = Arrays.binarySearch(numbers, 3);
+      System.out.println("Index of 3: " + index); // Output: Index of 3: 2
+    }
+  }`,
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 4.2: ArrayLists",
+      },
+      {
+        type: "point",
+        text: "Using ArrayLists for dynamic arrays in Java.",
+      },
+      {
+        type: "example",
+        code: `// ArrayList example
+  import java.util.ArrayList;
+
+  public class ArrayListExample {
+    public static void main(String[] args) {
+      ArrayList<String> list = new ArrayList<>();
+      list.add("Apple");
+      list.add("Banana");
+      list.add("Cherry");
+
+      for (String fruit : list) {
+        System.out.println(fruit);
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Common operations on ArrayLists (adding, removing, searching).",
+      },
+      {
+        type: "example",
+        code: `import java.util.ArrayList;
+
+  public class ArrayListOperations {
+    public static void main(String[] args) {
+      ArrayList<String> list = new ArrayList<>();
+      list.add("Apple");
+      list.add("Banana");
+      list.add("Cherry");
+
+      // Removing an element
+      list.remove("Banana");
+      System.out.println("List after removal: " + list); // Output: [Apple, Cherry]
+
+      // Searching for an element
+      boolean hasApple = list.contains("Apple");
+      System.out.println("Contains Apple: " + hasApple); // Output: Contains Apple: true
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "ArrayList vs Array: When to use which?",
+      },
+      {
+        type: "text",
+        text: `Arrays are of fixed size, meaning once created, their size cannot be changed. They are more efficient in terms of memory and performance, especially when the size of the data structure is known in advance. On the other hand, ArrayLists are dynamic and can grow or shrink as needed, making them more flexible but slightly less performant due to the overhead of resizing the underlying array. Use Arrays when dealing with a fixed number of elements and ArrayLists when the number of elements can change over time.`,
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 4.3: LinkedLists",
+      },
+      {
+        type: "point",
+        text: "Understanding LinkedLists and their usage in Java.",
+      },
+      {
+        type: "example",
+        code: `// LinkedList example
+  import java.util.LinkedList;
+
+  public class LinkedListExample {
+    public static void main(String[] args) {
+      LinkedList<String> list = new LinkedList<>();
+      list.add("Red");
+      list.add("Green");
+      list.add("Blue");
+
+      for (String color : list) {
+        System.out.println(color);
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Comparing LinkedList with ArrayList.",
+      },
+      {
+        type: "text",
+        text: `LinkedLists are better suited for scenarios where frequent insertion and deletion of elements are required, as they can be done in constant time O(1). However, they have a higher memory overhead due to the need for storing references to the next and previous elements. On the other hand, ArrayLists offer faster access time O(1) for getting elements by index but have slower performance for insertion and deletion operations, especially in the middle of the list, since elements need to be shifted.`,
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 4.4: HashMaps",
+      },
+      {
+        type: "point",
+        text: "Using HashMaps to store key-value pairs in Java.",
+      },
+      {
+        type: "example",
+        code: `// HashMap example
+  import java.util.HashMap;
+
+  public class HashMapExample {
+    public static void main(String[] args) {
+      HashMap<String, Integer> map = new HashMap<>();
+      map.put("Alice", 25);
+      map.put("Bob", 30);
+      map.put("Charlie", 35);
+
+      // Accessing value by key
+      System.out.println("Alice's age: " + map.get("Alice")); // Output: Alice's age: 25
+
+      // Iterating over keys and values
+      for (String name : map.keySet()) {
+        System.out.println(name + ": " + map.get(name));
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Handling collisions in HashMaps.",
+      },
+      {
+        type: "text",
+        text: `In a HashMap, collisions occur when multiple keys hash to the same index. Java handles collisions by storing multiple key-value pairs in a linked list at the same bucket (index). In the case of many collisions, this can degrade the performance of the HashMap from O(1) to O(n). Java 8 introduced a change where, after a threshold, the list at each bucket is replaced with a balanced tree, improving the worst-case performance to O(log n).`,
+      },
+      {
+        type: "point",
+        text: "Using LinkedHashMap for ordered key-value pairs.",
+      },
+      {
+        type: "example",
+        code: `// LinkedHashMap example
+  import java.util.LinkedHashMap;
+
+  public class LinkedHashMapExample {
+    public static void main(String[] args) {
+      LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+      map.put("Apple", 1);
+      map.put("Banana", 2);
+      map.put("Cherry", 3);
+
+      // Maintaining insertion order
+      for (String key : map.keySet()) {
+        System.out.println(key + ": " + map.get(key));
+      }
+    }
+  }`,
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 4.5: Stacks and Queues",
+      },
+      {
+        type: "point",
+        text: "Understanding the Stack data structure and its usage in Java.",
+      },
+      {
+        type: "example",
+        code: `// Stack example
+  import java.util.Stack;
+
+  public class StackExample {
+    public static void main(String[] args) {
+      Stack<String> stack = new Stack<>();
+      stack.push("First");
+      stack.push("Second");
+      stack.push("Third");
+
+      // Popping elements from the stack
+      while (!stack.isEmpty()) {
+        System.out.println(stack.pop());
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Understanding the Queue data structure and its usage in Java.",
+      },
+      {
+        type: "example",
+        code: `// Queue example
+  import java.util.LinkedList;
+  import java.util.Queue;
+
+  public class QueueExample {
+    public static void main(String[] args) {
+      Queue<String> queue = new LinkedList<>();
+      queue.add("First");
+      queue.add("Second");
+      queue.add("Third");
+
+      // Polling elements from the queue
+      while (!queue.isEmpty()) {
+        System.out.println(queue.poll());
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Deque as a double-ended queue.",
+      },
+      {
+        type: "example",
+        code: `// Deque example
+  import java.util.ArrayDeque;
+  import java.util.Deque;
+
+  public class DequeExample {
+    public static void main(String[] args) {
+      Deque<String> deque = new ArrayDeque<>();
+      
+      // Adding elements to both ends
+      deque.addFirst("First");
+      deque.addLast("Second");
+      deque.addLast("Third");
+      
+      // Removing elements from both ends
+      System.out.println("Removed from front: " + deque.removeFirst());
+      System.out.println("Removed from end: " + deque.removeLast());
+      
+      // Displaying remaining elements
+      System.out.println("Remaining elements: " + deque);
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Choosing between Stack, Queue, and Deque based on use cases.",
+      },
+      {
+        type: "text",
+        text: `- **Stack**: A last-in, first-out (LIFO) data structure. Use when you need to keep track of data in a reverse order, like in undo functionality.
+  - **Queue**: A first-in, first-out (FIFO) data structure. Use when you need to process elements in the order they were added, such as task scheduling.
+  - **Deque**: A double-ended queue that allows insertion and removal from both ends. Use when you need flexibility to add and remove elements from either end efficiently, like in a sliding window algorithm.`,
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 4.6: Trees and Graphs",
+      },
+      {
+        type: "point",
+        text: "Introduction to Tree data structures.",
+      },
+      {
+        type: "example",
+        code: `// Basic Tree Node example
+  public class TreeNode {
+    int value;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+
+    public static void main(String[] args) {
+      TreeNode root = new TreeNode(1);
+      root.left = new TreeNode(2);
+      root.right = new TreeNode(3);
+
+      System.out.println("Root value: " + root.value); // Output: Root value: 1
+      System.out.println("Left child value: " + root.left.value); // Output: Left child value: 2
+      System.out.println("Right child value: " + root.right.value); // Output: Right child value: 3
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Introduction to Graph data structures.",
+      },
+      {
+        type: "example",
+        code: `// Basic Graph example using adjacency list
+  import java.util.ArrayList;
+  import java.util.List;
+
+  public class GraphExample {
+    private List<List<Integer>> adjList;
+
+    public GraphExample(int vertices) {
+      adjList = new ArrayList<>();
+      for (int i = 0; i < vertices; i++) {
+        adjList.add(new ArrayList<>());
+      }
+    }
+
+    public void addEdge(int v, int w) {
+      adjList.get(v).add(w);
+      adjList.get(w).add(v); // For undirected graph
+    }
+
+    public void printGraph() {
+      for (int i = 0; i < adjList.size(); i++) {
+        System.out.print("Vertex " + i + ": ");
+        for (Integer edge : adjList.get(i)) {
+          System.out.print(edge + " ");
+        }
+        System.out.println();
+      }
+    }
+
+    public static void main(String[] args) {
+      GraphExample graph = new GraphExample(5);
+      graph.addEdge(0, 1);
+      graph.addEdge(0, 4);
+      graph.addEdge(1, 2);
+      graph.addEdge(1, 3);
+      graph.addEdge(2, 4);
+
+      graph.printGraph();
+    }
+  }`,
+      },
+  ],
   module5: [
     {
       type: 'margin'
@@ -1471,7 +1470,7 @@ public class GraphExample {
     {
       type: "header",
       level: 3,
-      text: "Lesson 7.1: Reading User Input",
+      text: "Lesson 5.1: Reading User Input",
     },
     {
       type: "point",
@@ -1493,7 +1492,7 @@ public class GraphExample {
     {
       type: "header",
       level: 3,
-      text: "Lesson 7.2: Writing Output",
+      text: "Lesson 5.2: Writing Output",
     },
     {
       type: "point",
@@ -2123,226 +2122,225 @@ public class CustomList<E> extends AbstractList<E> {
 }`,
     },
 ],
- module9: [
-    {
-      type: 'margin'
-    },
-    {
-      type: "header",
-      level: 2,
-      text: "Module 9: Java Streams and Lambdas",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 9.1: Introduction to Streams",
-    },
-    {
-      type: "point",
-      text: "Using Streams to process collections.",
-    },
-    {
-      type: "point",
-      text: "Streams are a powerful abstraction for processing sequences of elements, supporting sequential and parallel operations.",
-    },
-    {
-      type: "example",
-      code: `// Stream example
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+  module9: [
+      {
+        type: 'margin'
+      },
+      {
+        type: "header",
+        level: 2,
+        text: "Module 9: Java Streams and Lambdas",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 9.1: Introduction to Streams",
+      },
+      {
+        type: "point",
+        text: "Using Streams to process collections.",
+      },
+      {
+        type: "point",
+        text: "Streams are a powerful abstraction for processing sequences of elements, supporting sequential and parallel operations.",
+      },
+      {
+        type: "example",
+        code: `// Stream example
+  import java.util.Arrays;
+  import java.util.List;
+  import java.util.stream.Collectors;
 
-public class StreamExample {
-  public static void main(String[] args) {
-    List<String> names = Arrays.asList("John", "Jane", "Jack", "Jill");
+  public class StreamExample {
+    public static void main(String[] args) {
+      List<String> names = Arrays.asList("John", "Jane", "Jack", "Jill");
 
-    // Creating a stream from the list
-    List<String> filteredNames = names.stream()
-                    .filter(name -> name.startsWith("J")) // Filtering names that start with 'J'
-                    .map(String::toUpperCase) // Converting each name to uppercase
-                    .sorted() // Sorting the names
-                    .collect(Collectors.toList()); // Collecting the results into a new list
+      // Creating a stream from the list
+      List<String> filteredNames = names.stream()
+                      .filter(name -> name.startsWith("J")) // Filtering names that start with 'J'
+                      .map(String::toUpperCase) // Converting each name to uppercase
+                      .sorted() // Sorting the names
+                      .collect(Collectors.toList()); // Collecting the results into a new list
 
-    System.out.println("Filtered and Processed Names: " + filteredNames);
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "The stream pipeline consists of a sequence of operations: source, intermediate operations (filter, map, etc.), and terminal operations (collect, forEach, etc.).",
-    },
-    {
-      type: "point",
-      text: "Intermediate operations are lazy, meaning they are not executed until a terminal operation is invoked.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 9.2: Lambda Expressions",
-    },
-    {
-      type: "point",
-      text: "Using Lambda expressions for concise code.",
-    },
-    {
-      type: "point",
-      text: "Lambda expressions provide a clear and concise way to represent a function interface using an expression.",
-    },
-    {
-      type: "example",
-      code: `// Lambda expression example
-import java.util.Arrays;
-import java.util.List;
+      System.out.println("Filtered and Processed Names: " + filteredNames);
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "The stream pipeline consists of a sequence of operations: source, intermediate operations (filter, map, etc.), and terminal operations (collect, forEach, etc.).",
+      },
+      {
+        type: "point",
+        text: "Intermediate operations are lazy, meaning they are not executed until a terminal operation is invoked.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 9.2: Lambda Expressions",
+      },
+      {
+        type: "point",
+        text: "Using Lambda expressions for concise code.",
+      },
+      {
+        type: "point",
+        text: "Lambda expressions provide a clear and concise way to represent a function interface using an expression.",
+      },
+      {
+        type: "example",
+        code: `// Lambda expression example
+  import java.util.Arrays;
+  import java.util.List;
 
-public class LambdaExample {
-  public static void main(String[] args) {
-    List<String> names = Arrays.asList("John", "Jane", "Jack", "Jill");
+  public class LambdaExample {
+    public static void main(String[] args) {
+      List<String> names = Arrays.asList("John", "Jane", "Jack", "Jill");
 
-    // Using lambda expressions to iterate and print names
-    names.forEach(name -> System.out.println(name));
+      // Using lambda expressions to iterate and print names
+      names.forEach(name -> System.out.println(name));
 
-    // Sorting using lambda expressions
-    names.sort((a, b) -> b.compareTo(a)); // Sorting in reverse alphabetical order
-    System.out.println("Sorted Names: " + names);
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Lambda syntax: (parameters) -> expression. Lambda expressions can have zero or more parameters and can return a value.",
-    },
-    {
-      type: "point",
-      text: "Common use cases for lambdas include functional interfaces such as `Runnable`, `Callable`, and the `Consumer`, `Function`, and `Predicate` interfaces from `java.util.function`.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 9.3: Stream Intermediate Operations",
-    },
-    {
-      type: "point",
-      text: "Common intermediate operations include `filter`, `map`, `flatMap`, `distinct`, `sorted`, and `limit`.",
-    },
-    {
-      type: "example",
-      code: `// Stream intermediate operations example
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+      // Sorting using lambda expressions
+      names.sort((a, b) -> b.compareTo(a)); // Sorting in reverse alphabetical order
+      System.out.println("Sorted Names: " + names);
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Lambda syntax: (parameters) -> expression. Lambda expressions can have zero or more parameters and can return a value.",
+      },
+      {
+        type: "point",
+        text: "Common use cases for lambdas include functional interfaces such as `Runnable`, `Callable`, and the `Consumer`, `Function`, and `Predicate` interfaces from `java.util.function`.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 9.3: Stream Intermediate Operations",
+      },
+      {
+        type: "point",
+        text: "Common intermediate operations include `filter`, `map`, `flatMap`, `distinct`, `sorted`, and `limit`.",
+      },
+      {
+        type: "example",
+        code: `// Stream intermediate operations example
+  import java.util.Arrays;
+  import java.util.List;
+  import java.util.stream.Collectors;
 
-public class StreamIntermediateExample {
-  public static void main(String[] args) {
-    List<String> sentences = Arrays.asList("Hello world", "Java Streams are cool", "Lambda expressions are powerful");
+  public class StreamIntermediateExample {
+    public static void main(String[] args) {
+      List<String> sentences = Arrays.asList("Hello world", "Java Streams are cool", "Lambda expressions are powerful");
 
-    List<String> words = sentences.stream()
-                    .flatMap(sentence -> Arrays.stream(sentence.split(" "))) // Flattening lists of words
-                    .distinct() // Removing duplicates
-                    .sorted() // Sorting words
-                    .limit(5) // Limiting to first 5 elements
-                    .collect(Collectors.toList());
+      List<String> words = sentences.stream()
+                      .flatMap(sentence -> Arrays.stream(sentence.split(" "))) // Flattening lists of words
+                      .distinct() // Removing duplicates
+                      .sorted() // Sorting words
+                      .limit(5) // Limiting to first 5 elements
+                      .collect(Collectors.toList());
 
-    System.out.println("Processed Words: " + words);
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "The `flatMap` operation is used to flatten a stream of collections into a single stream.",
-    },
-    {
-      type: "point",
-      text: "Intermediate operations do not modify the source but return a new stream.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 9.4: Stream Terminal Operations",
-    },
-    {
-      type: "point",
-      text: "Terminal operations include `collect`, `forEach`, `reduce`, `count`, `min`, `max`, and `anyMatch`.",
-    },
-    {
-      type: "example",
-      code: `// Stream terminal operations example
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+      System.out.println("Processed Words: " + words);
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "The `flatMap` operation is used to flatten a stream of collections into a single stream.",
+      },
+      {
+        type: "point",
+        text: "Intermediate operations do not modify the source but return a new stream.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 9.4: Stream Terminal Operations",
+      },
+      {
+        type: "point",
+        text: "Terminal operations include `collect`, `forEach`, `reduce`, `count`, `min`, `max`, and `anyMatch`.",
+      },
+      {
+        type: "example",
+        code: `// Stream terminal operations example
+  import java.util.Arrays;
+  import java.util.List;
+  import java.util.Optional;
 
-public class StreamTerminalExample {
-  public static void main(String[] args) {
-    List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+  public class StreamTerminalExample {
+    public static void main(String[] args) {
+      List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
-    // Reduce example
-    Optional<Integer> sum = numbers.stream()
-                      .reduce((a, b) -> a + b); // Summing elements
-    System.out.println("Sum: " + sum.orElse(0));
+      // Reduce example
+      Optional<Integer> sum = numbers.stream()
+                        .reduce((a, b) -> a + b); // Summing elements
+      System.out.println("Sum: " + sum.orElse(0));
 
-    // Count example
-    long count = numbers.stream()
-                    .filter(num -> num % 2 == 0) // Filtering even numbers
-                    .count();
-    System.out.println("Count of even numbers: " + count);
+      // Count example
+      long count = numbers.stream()
+                      .filter(num -> num % 2 == 0) // Filtering even numbers
+                      .count();
+      System.out.println("Count of even numbers: " + count);
 
-    // AnyMatch example
-    boolean anyGreaterThanThree = numbers.stream()
-                    .anyMatch(num -> num > 3); // Check if any number is greater than 3
-    System.out.println("Any number greater than 3? " + anyGreaterThanThree);
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Terminal operations produce a result or a side-effect and terminate the stream.",
-    },
-    {
-      type: "point",
-      text: "For example, `collect` gathers the results into a collection, while `forEach` performs an action for each element.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 9.5: Combining Streams and Lambdas",
-    },
-    {
-      type: "point",
-      text: "Combining streams with lambda expressions to perform complex data processing tasks.",
-    },
-    {
-      type: "example",
-      code: `// Combining streams and lambdas example
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+      // AnyMatch example
+      boolean anyGreaterThanThree = numbers.stream()
+                      .anyMatch(num -> num > 3); // Check if any number is greater than 3
+      System.out.println("Any number greater than 3? " + anyGreaterThanThree);
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Terminal operations produce a result or a side-effect and terminate the stream.",
+      },
+      {
+        type: "point",
+        text: "For example, `collect` gathers the results into a collection, while `forEach` performs an action for each element.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 9.5: Combining Streams and Lambdas",
+      },
+      {
+        type: "point",
+        text: "Combining streams with lambda expressions to perform complex data processing tasks.",
+      },
+      {
+        type: "example",
+        code: `// Combining streams and lambdas example
+  import java.util.Arrays;
+  import java.util.List;
+  import java.util.stream.Collectors;
 
-public class CombinedStreamLambdaExample {
-  public static void main(String[] args) {
-    List<String> phrases = Arrays.asList("The quick brown fox", "jumps over", "the lazy dog");
+  public class CombinedStreamLambdaExample {
+    public static void main(String[] args) {
+      List<String> phrases = Arrays.asList("The quick brown fox", "jumps over", "the lazy dog");
 
-    // Combining streams and lambdas for complex processing
-    List<String> result = phrases.stream()
-                    .flatMap(phrase -> Arrays.stream(phrase.split(" "))) // Flattening words
-                    .map(String::toLowerCase) // Converting to lowercase
-                    .filter(word -> word.length() > 3) // Filtering words longer than 3 characters
-                    .distinct() // Removing duplicates
-                    .sorted() // Sorting words
-                    .collect(Collectors.toList()); // Collecting results
+      // Combining streams and lambdas for complex processing
+      List<String> result = phrases.stream()
+                      .flatMap(phrase -> Arrays.stream(phrase.split(" "))) // Flattening words
+                      .map(String::toLowerCase) // Converting to lowercase
+                      .filter(word -> word.length() > 3) // Filtering words longer than 3 characters
+                      .distinct() // Removing duplicates
+                      .sorted() // Sorting words
+                      .collect(Collectors.toList()); // Collecting results
 
-    System.out.println("Processed Words: " + result);
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "Complex processing often involves chaining multiple operations and utilizing both intermediate and terminal operations.",
-    },
-    {
-      type: "point",
-      text: "Understanding how to effectively use streams and lambdas can lead to more concise and readable code.",
-    },
-],
-
+      System.out.println("Processed Words: " + result);
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "Complex processing often involves chaining multiple operations and utilizing both intermediate and terminal operations.",
+      },
+      {
+        type: "point",
+        text: "Understanding how to effectively use streams and lambdas can lead to more concise and readable code.",
+      },
+  ],
   module10: [
     {
       type: 'margin'
@@ -2350,12 +2348,752 @@ public class CombinedStreamLambdaExample {
     {
       type: "header",
       level: 2,
-      text: "Module 10: Multithreading and Concurrency",
+      text: "Module 10: GUI Development in Java",
     },
     {
       type: "header",
       level: 3,
-      text: "Lesson 10.1: Basics of Multithreading",
+      text: "Lesson 10.1: Introduction to Java GUI",
+    },
+    {
+      type: "point",
+      text: "Overview of GUI in Java: Understanding Graphical User Interfaces (GUIs) and their significance in creating user-friendly applications.",
+    },
+    {
+      type: "point",
+      text: "Java's GUI frameworks: Swing and JavaFX. Swing is older and provides a lightweight, platform-independent windowing system. JavaFX is newer, offering modern UI controls, 3D graphics, and a more flexible design system.",
+    },
+    {
+      type: "point",
+      text: "Why learn GUI development? GUIs allow users to interact with software visually, making applications accessible to a broader audience and enhancing user experience.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Basic Frame
+import javax.swing.JFrame;
+
+public class MyFrame {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("My First GUI");
+    frame.setSize(400, 400);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above creates a basic Swing application with a window (JFrame). The window size is set to 400x400 pixels, and the program terminates when the window is closed.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 10.2: Components and Layouts",
+    },
+    {
+      type: "point",
+      text: "Introduction to GUI components: Components are the building blocks of any GUI. They include elements like buttons, labels, text fields, checkboxes, and more.",
+    },
+    {
+      type: "point",
+      text: "Using JButton, JLabel, and JTextField: These are commonly used components in Swing. JButton represents a clickable button, JLabel is used for displaying text or images, and JTextField allows for user input.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Adding Components
+import javax.swing.*;
+
+public class MyFrame {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("Component Example");
+    JButton button = new JButton("Click Me!");
+    JLabel label = new JLabel("Label Example");
+    JTextField textField = new JTextField("Enter Text Here");
+
+    frame.setLayout(null); // Disable default layout
+    button.setBounds(150, 100, 100, 40);
+    label.setBounds(150, 50, 200, 30);
+    textField.setBounds(150, 150, 200, 30);
+
+    frame.add(button);
+    frame.add(label);
+    frame.add(textField);
+
+    frame.setSize(500, 400);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: In the code above, we create a window and add three components: a button, a label, and a text field. The setBounds method is used to manually set the position and size of each component.",
+    },
+    {
+      type: "point",
+      text: "Introduction to Layout Managers: Layout managers handle the positioning and sizing of components within a container. Java provides several layout managers, such as FlowLayout, BorderLayout, GridLayout, and more.",
+    },
+    {
+      type: "point",
+      text: "FlowLayout: Arranges components in a left-to-right flow, like text in a paragraph.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: FlowLayout
+import javax.swing.*;
+import java.awt.*;
+
+public class FlowLayoutExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("FlowLayout Example");
+    frame.setLayout(new FlowLayout());
+
+    frame.add(new JButton("Button 1"));
+    frame.add(new JButton("Button 2"));
+    frame.add(new JButton("Button 3"));
+
+    frame.setSize(300, 200);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "BorderLayout: Divides the container into five regions: North, South, East, West, and Center. Each component is placed in one of these regions.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: BorderLayout
+import javax.swing.*;
+import java.awt.*;
+
+public class BorderLayoutExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("BorderLayout Example");
+    frame.setLayout(new BorderLayout());
+
+    frame.add(new JButton("North"), BorderLayout.NORTH);
+    frame.add(new JButton("South"), BorderLayout.SOUTH);
+    frame.add(new JButton("East"), BorderLayout.EAST);
+    frame.add(new JButton("West"), BorderLayout.WEST);
+    frame.add(new JButton("Center"), BorderLayout.CENTER);
+
+    frame.setSize(400, 400);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "GridLayout: Arranges components in a grid of cells, where each cell has the same size. It’s useful for creating forms and tables.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: GridLayout
+import javax.swing.*;
+import java.awt.*;
+
+public class GridLayoutExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("GridLayout Example");
+    frame.setLayout(new GridLayout(2, 3)); // 2 rows, 3 columns
+
+    frame.add(new JButton("Button 1"));
+    frame.add(new JButton("Button 2"));
+    frame.add(new JButton("Button 3"));
+    frame.add(new JButton("Button 4"));
+    frame.add(new JButton("Button 5"));
+    frame.add(new JButton("Button 6"));
+
+    frame.setSize(300, 200);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The GridLayout example arranges buttons in a 2x3 grid. Each button occupies one cell in the grid.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 10.3: Event Handling in GUI",
+    },
+    {
+      type: "point",
+      text: "Understanding Event-Driven Programming: In GUI applications, actions such as button clicks, mouse movements, or keyboard inputs are events. Event-driven programming involves writing code that responds to these events.",
+    },
+    {
+      type: "point",
+      text: "ActionListener: An interface used to handle action events, such as button clicks. The ActionListener interface must be implemented by a class that processes the event.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Handling Button Click with ActionListener
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ButtonClickExample implements ActionListener {
+  private JButton button;
+
+  public ButtonClickExample() {
+    JFrame frame = new JFrame("Event Handling Example");
+    button = new JButton("Click Me!");
+    button.addActionListener(this);
+
+    frame.add(button);
+    frame.setSize(300, 200);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    button.setText("Clicked!");
+  }
+
+  public static void main(String[] args) {
+    new ButtonClickExample();
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above changes the button’s label when it is clicked. The ActionListener is implemented by the ButtonClickExample class, and the actionPerformed method is overridden to define the action that occurs when the button is clicked.",
+    },
+    {
+      type: "point",
+      text: "Using Anonymous Inner Classes for Event Handling: Anonymous inner classes are a concise way to implement listeners directly within the component that generates the event.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Anonymous Inner Class for Event Handling
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class AnonymousClassExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("Anonymous Inner Class Example");
+    JButton button = new JButton("Click Me!");
+
+    button.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        button.setText("Clicked!");
+      }
+    });
+
+    frame.add(button);
+    frame.setSize(300, 200);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: Here, an ActionListener is implemented as an anonymous inner class. This method is more concise, especially when the listener is only needed in one place.",
+    },
+       {
+      type: "header",
+      level: 3,
+      text: "Lesson 10.4: Working with Menus and Toolbars",
+    },
+    {
+      type: "point",
+      text: "Adding Menus to a GUI: Menus provide a structured way to present a list of commands or options to the user. In Swing, you can create menus using the JMenu, JMenuItem, and JMenuBar classes.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Creating a Simple Menu
+import javax.swing.*;
+
+public class MenuExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("Menu Example");
+    JMenuBar menuBar = new JMenuBar();
+
+    JMenu fileMenu = new JMenu("File");
+    JMenuItem openItem = new JMenuItem("Open");
+    JMenuItem saveItem = new JMenuItem("Save");
+    JMenuItem exitItem = new JMenuItem("Exit");
+
+    fileMenu.add(openItem);
+    fileMenu.add(saveItem);
+    fileMenu.addSeparator(); // Adds a separator line
+    fileMenu.add(exitItem);
+
+    menuBar.add(fileMenu);
+    frame.setJMenuBar(menuBar);
+
+    frame.setSize(400, 300);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above demonstrates how to create a basic menu with 'File' as the main menu and 'Open', 'Save', and 'Exit' as menu items. The separator adds a dividing line between the items.",
+    },
+    {
+      type: "point",
+      text: "Toolbars: Toolbars offer quick access to frequently used actions. In Swing, you can create a toolbar using the JToolBar class, which can contain buttons, separators, and other components.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Creating a Toolbar
+import javax.swing.*;
+
+public class ToolbarExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("Toolbar Example");
+    JToolBar toolbar = new JToolBar();
+
+    JButton newButton = new JButton("New");
+    JButton openButton = new JButton("Open");
+    JButton saveButton = new JButton("Save");
+
+    toolbar.add(newButton);
+    toolbar.add(openButton);
+    toolbar.add(saveButton);
+
+    frame.add(toolbar, "North");
+
+    frame.setSize(400, 300);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above creates a toolbar with three buttons: 'New', 'Open', and 'Save'. The toolbar is added to the top (North) of the window using a BorderLayout.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 5.5: Dialogs and Pop-up Windows",
+    },
+    {
+      type: "point",
+      text: "Understanding Dialogs: Dialogs are small windows that prompt the user for input or provide information. Swing provides various dialog classes, such as JOptionPane for standard dialogs.",
+    },
+    {
+      type: "point",
+      text: "Using JOptionPane for Message Dialogs: JOptionPane can be used to display information, warnings, or error messages to the user.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: JOptionPane for Information Dialog
+import javax.swing.*;
+
+public class MessageDialogExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame();
+    JOptionPane.showMessageDialog(frame, "This is an information dialog.", "Information", JOptionPane.INFORMATION_MESSAGE);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above creates a simple information dialog that displays a message to the user. The message type is set to INFORMATION_MESSAGE.",
+    },
+    {
+      type: "point",
+      text: "Input Dialogs: Input dialogs prompt the user to enter a value, which can then be used within the application.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Input Dialog
+import javax.swing.*;
+
+public class InputDialogExample {
+  public static void main(String[] args) {
+    String name = JOptionPane.showInputDialog("Enter your name:");
+    System.out.println("Name entered: " + name);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above creates an input dialog that prompts the user to enter their name. The entered value is then printed to the console.",
+    },
+    {
+      type: "point",
+      text: "Confirm Dialogs: Confirm dialogs ask the user to make a decision, typically presented as Yes/No or OK/Cancel options.",
+    },
+    {
+      type: "example",
+      code: `// Java Swing Example: Confirm Dialog
+import javax.swing.*;
+
+public class ConfirmDialogExample {
+  public static void main(String[] args) {
+    int response = JOptionPane.showConfirmDialog(null, "Do you want to proceed?", "Confirmation", JOptionPane.YES_NO_OPTION);
+
+    if (response == JOptionPane.YES_OPTION) {
+      System.out.println("User chose to proceed.");
+    } else {
+      System.out.println("User chose not to proceed.");
+    }
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above shows a confirmation dialog with 'Yes' and 'No' options. The user's response is captured and handled accordingly.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 10.6: Advanced GUI Design with JavaFX",
+    },
+    {
+      type: "point",
+      text: "Introduction to JavaFX: JavaFX is a modern UI toolkit for Java that provides rich features for developing visually appealing desktop applications. It supports advanced graphics, animations, and media playback.",
+    },
+    {
+      type: "point",
+      text: "Setting up JavaFX: Unlike Swing, JavaFX is not included in the standard JDK after Java 8. You'll need to download and configure it separately or use a build tool like Maven or Gradle.",
+    },
+    {
+      type: "example",
+      code: `// JavaFX Example: Basic Application
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class JavaFXExample extends Application {
+  @Override
+  public void start(Stage primaryStage) {
+    Button btn = new Button("Click Me!");
+    btn.setOnAction(e -> System.out.println("Button Clicked"));
+
+    StackPane root = new StackPane();
+    root.getChildren().add(btn);
+
+    Scene scene = new Scene(root, 300, 250);
+    primaryStage.setTitle("JavaFX Example");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+  public static void main(String[] args) {
+    launch(args);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The code above demonstrates a basic JavaFX application. It creates a window with a button. When the button is clicked, a message is printed to the console. The StackPane layout is used to center the button within the window.",
+    },
+    {
+      type: "point",
+      text: "Working with Scenes and Nodes: In JavaFX, every UI element is a node, and a scene represents a container for all the nodes in a window. Nodes can include controls, shapes, images, and more.",
+    },
+    {
+      type: "example",
+      code: `// JavaFX Example: Working with Multiple Nodes
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class MultiNodeExample extends Application {
+  @Override
+  public void start(Stage primaryStage) {
+    Button btn1 = new Button("Button 1");
+    Button btn2 = new Button("Button 2");
+
+    VBox vbox = new VBox(10); // VBox with spacing of 10 pixels
+    vbox.getChildren().addAll(btn1, btn2);
+
+    Scene scene = new Scene(vbox, 300, 250);
+    primaryStage.setTitle("JavaFX Multi-Node Example");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+  public static void main(String[] args) {
+    launch(args);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: This example creates a VBox layout, which arranges two buttons vertically with a 10-pixel space between them. The scene is then set to the primary stage and displayed.",
+    },
+    {
+      type: "point",
+      text: "JavaFX Controls: JavaFX offers a wide range of controls, such as TextField, Label, Checkbox, RadioButton, and more, which can be used to build complex UIs.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 10.7: Styling and Theming GUIs with CSS",
+    },
+    {
+      type: "point",
+      text: "Introduction to CSS in JavaFX: JavaFX allows you to style your GUI components using CSS (Cascading Style Sheets). This enables you to separate the design from the application logic, making it easier to maintain and update the look and feel of your application.",
+    },
+    {
+      type: "point",
+      text: "Applying CSS Styles: You can apply CSS styles directly in your JavaFX application or link to an external CSS file. Styles can be applied to individual components or globally across the entire application.",
+    },
+    {
+      type: "example",
+      code: `/* Example of an external CSS file for JavaFX */
+.button {
+  -fx-background-color: #2a9d8f;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+  -fx-padding: 10px;
+}
+
+/* JavaFX Example: Applying CSS Styles */
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class CssExample extends Application {
+  @Override
+  public void start(Stage primaryStage) {
+    Button btn = new Button("Styled Button");
+    btn.getStyleClass().add("button"); // Applying CSS class
+
+    StackPane root = new StackPane();
+    root.getChildren().add(btn);
+
+    Scene scene = new Scene(root, 300, 250);
+    scene.getStylesheets().add("styles.css"); // Linking CSS file
+    primaryStage.setTitle("JavaFX CSS Example");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+  public static void main(String[] args) {
+    launch(args);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: The example shows how to style a button in JavaFX using an external CSS file. The CSS class `.button` is defined in the CSS file, and the style is applied to the button in the JavaFX application using `getStyleClass().add(\"button\")`.",
+    },
+    {
+      type: "point",
+      text: "Theming Applications: JavaFX allows you to apply different themes by simply switching the CSS files. This provides a flexible way to change the entire appearance of an application with minimal code changes.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 10.8: Animations and Effects in JavaFX",
+    },
+    {
+      type: "point",
+      text: "Introduction to JavaFX Animations: JavaFX provides powerful animation features that allow you to create dynamic, visually engaging UIs. Animations can be used to move objects, fade elements in and out, rotate components, and more.",
+    },
+    {
+      type: "point",
+      text: "Using the Timeline Class: The Timeline class is used to define a sequence of keyframes that can animate the properties of nodes over time.",
+    },
+    {
+      type: "example",
+      code: `// JavaFX Example: Simple Animation using Timeline
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+public class AnimationExample extends Application {
+  @Override
+  public void start(Stage primaryStage) {
+    Button btn = new Button("Animate Me");
+
+    Timeline timeline = new Timeline(
+        new KeyFrame(Duration.ZERO, e -> btn.setScaleX(1)),
+        new KeyFrame(new Duration(500), e -> btn.setScaleX(1.5)),
+        new KeyFrame(new Duration(1000), e -> btn.setScaleX(1))
+    );
+
+    timeline.setCycleCount(Timeline.INDEFINITE);
+    timeline.play();
+
+    StackPane root = new StackPane();
+    root.getChildren().add(btn);
+
+    Scene scene = new Scene(root, 300, 250);
+    primaryStage.setTitle("JavaFX Animation Example");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+  public static void main(String[] args) {
+    launch(args);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: In this example, a simple animation is applied to a button, causing it to scale up and down continuously. The Timeline class is used to define the keyframes for the animation, and `setCycleCount(Timeline.INDEFINITE)` makes the animation repeat indefinitely.",
+    },
+    {
+      type: "point",
+      text: "Working with Transition Classes: JavaFX provides several transition classes, such as FadeTransition, TranslateTransition, RotateTransition, and ScaleTransition, that make it easier to implement common animations.",
+    },
+    {
+      type: "example",
+      code: `// JavaFX Example: RotateTransition
+import javafx.animation.RotateTransition;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+public class RotateTransitionExample extends Application {
+  @Override
+  public void start(Stage primaryStage) {
+    Button btn = new Button("Rotate Me");
+
+    RotateTransition rotateTransition = new RotateTransition(Duration.millis(2000), btn);
+    rotateTransition.setByAngle(360);
+    rotateTransition.setCycleCount(RotateTransition.INDEFINITE);
+    rotateTransition.setAutoReverse(true);
+
+    btn.setOnAction(e -> rotateTransition.play());
+
+    StackPane root = new StackPane();
+    root.getChildren().add(btn);
+
+    Scene scene = new Scene(root, 300, 250);
+    primaryStage.setTitle("JavaFX Rotate Transition Example");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+  public static void main(String[] args) {
+    launch(args);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: This example uses the RotateTransition class to rotate a button 360 degrees when it is clicked. The rotation repeats indefinitely and reverses after each cycle.",
+    },
+    {
+      type: "point",
+      text: "Applying Effects: JavaFX also supports visual effects, such as shadows, lighting, and reflections, which can be applied to nodes to enhance the visual appeal of your application.",
+    },
+    {
+      type: "example",
+      code: `// JavaFX Example: DropShadow Effect
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class DropShadowExample extends Application {
+  @Override
+  public void start(Stage primaryStage) {
+    Button btn = new Button("Button with Shadow");
+    btn.setEffect(new DropShadow());
+
+    StackPane root = new StackPane();
+    root.getChildren().add(btn);
+
+    Scene scene = new Scene(root, 300, 250);
+    primaryStage.setTitle("JavaFX DropShadow Example");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+  public static void main(String[] args) {
+    launch(args);
+  }
+}`,
+    },
+    {
+      type: "point",
+      text: "Explanation: In this example, a DropShadow effect is applied to a button, giving it a shadowed appearance. The DropShadow effect is just one of many effects available in JavaFX.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 10.9: Best Practices in GUI Development",
+    },
+    {
+      type: "point",
+      text: "Consistency: Ensure that your GUI is consistent across different parts of the application. This includes using similar colors, fonts, and layouts to provide a cohesive user experience.",
+    },
+    {
+      type: "point",
+      text: "Usability: Focus on creating an intuitive and easy-to-use interface. Avoid cluttering the UI with too many elements and ensure that the most important features are easily accessible.",
+    },
+    {
+      type: "point",
+      text: "Responsiveness: Design your GUI to be responsive, meaning it should adapt to different screen sizes and resolutions. In JavaFX, this can be achieved by using flexible layouts and avoiding fixed sizes where possible.",
+    },
+    {
+      type: "point",
+      text: "Accessibility: Consider accessibility in your design by providing keyboard shortcuts, screen reader support, and ensuring that color schemes are usable by people with visual impairments.",
+    },
+    {
+      type: "point",
+      text: "Performance: Optimize your GUI to run smoothly, especially when dealing with complex animations or large datasets. Avoid unnecessary redraws and optimize event handling to reduce lag.",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Conclusion and Further Resources",
+    },
+    {
+      type: "point",
+      text: "This module has provided an in-depth look at GUI development in Java, covering both Swing and JavaFX. With these skills, you're now equipped to create user-friendly, visually appealing desktop applications.",
+    },
+    {
+      type: "point",
+      text: "Further Learning: Explore the official [JavaFX documentation](https://openjfx.io/) and [Swing tutorials](https://docs.oracle.com/javase/tutorial/uiswing/) to deepen your understanding and learn about more advanced features.",
+    },
+    {
+      type: "point",
+      text: "Practice: Build small projects, such as a calculator, a simple game, or a text editor, to apply what you've learned and gain hands-on experience.",
+    },
+    {
+      type: "margin"
+    }
+  ],
+  module11: [
+    {
+      type: 'margin'
+    },
+    {
+      type: "header",
+      level: 2,
+      text: "Module 11: Multithreading and Concurrency",
+    },
+    {
+      type: "header",
+      level: 3,
+      text: "Lesson 11.1: Basics of Multithreading",
     },
     {
       type: "point",
@@ -2398,7 +3136,7 @@ public class MultithreadingExample {
     {
       type: "header",
       level: 3,
-      text: "Lesson 10.2: Synchronization and Concurrency Utilities",
+      text: "Lesson 11.2: Synchronization and Concurrency Utilities",
     },
     {
       type: "point",
@@ -2466,7 +3204,7 @@ public class SynchronizedExample {
     {
       type: "header",
       level: 3,
-      text: "Lesson 10.3: Advanced Synchronization Techniques",
+      text: "Lesson 11.3: Advanced Synchronization Techniques",
     },
     {
       type: "point",
@@ -2522,7 +3260,7 @@ public class ReentrantLockExample {
     {
       type: "header",
       level: 3,
-      text: "Lesson 10.4: Concurrency Utilities",
+      text: "Lesson 11.4: Concurrency Utilities",
     },
     {
       type: "point",
@@ -2566,7 +3304,7 @@ public class ExecutorServiceExample {
     {
       type: "header",
       level: 3,
-      text: "Lesson 10.5: Thread Safety and Avoiding Deadlocks",
+      text: "Lesson 11.5: Thread Safety and Avoiding Deadlocks",
     },
     {
       type: "point",
@@ -2622,755 +3360,754 @@ public class DeadlockExample {
       type: "point",
       text: "In the example, `thread1` and `thread2` each hold one lock while waiting for the other, resulting in a deadlock situation.",
     },
-],
-  module11: [
-    {
-      type: 'margin'
-    },
-    {
-      type: "header",
-      level: 2,
-      text: "Module 11: Networking in Java",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 11.1: Basics of Java Networking",
-    },
-    {
-      type: "point",
-      text: "Understanding sockets and basic networking concepts.",
-    },
-    {
-      type: "point",
-      text: "Networking in Java involves using sockets to establish communication between a client and a server over a network.",
-    },
-    {
-      type: "point",
-      text: "A `ServerSocket` is used by the server to listen for incoming connections, while a `Socket` is used by the client to connect to the server.",
-    },
-    {
-      type: "example",
-      code: `// Simple client-server example
+  ],
+  module12: [
+      {
+        type: 'margin'
+      },
+      {
+        type: "header",
+        level: 2,
+        text: "Module 12: Networking in Java",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 12.1: Basics of Java Networking",
+      },
+      {
+        type: "point",
+        text: "Understanding sockets and basic networking concepts.",
+      },
+      {
+        type: "point",
+        text: "Networking in Java involves using sockets to establish communication between a client and a server over a network.",
+      },
+      {
+        type: "point",
+        text: "A `ServerSocket` is used by the server to listen for incoming connections, while a `Socket` is used by the client to connect to the server.",
+      },
+      {
+        type: "example",
+        code: `// Simple client-server example
 
-// Server code
-import java.io.*;
-import java.net.*;
+  // Server code
+  import java.io.*;
+  import java.net.*;
 
-public class SimpleServer {
-  public static void main(String[] args) throws IOException {
-    ServerSocket serverSocket = new ServerSocket(12345);
-    System.out.println("Server started. Waiting for a client...");
-    Socket clientSocket = serverSocket.accept();
-    System.out.println("Client connected.");
+  public class SimpleServer {
+    public static void main(String[] args) throws IOException {
+      ServerSocket serverSocket = new ServerSocket(12345);
+      System.out.println("Server started. Waiting for a client...");
+      Socket clientSocket = serverSocket.accept();
+      System.out.println("Client connected.");
 
-    PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-    BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+      PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+      BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-    String inputLine;
-    while ((inputLine = in.readLine()) != null) {
-      out.println("Server received: " + inputLine);
-    }
-
-    in.close();
-    out.close();
-    clientSocket.close();
-    serverSocket.close();
-  }
-}
-
-// Client code
-import java.io.*;
-import java.net.*;
-
-public class SimpleClient {
-  public static void main(String[] args) throws IOException {
-    Socket socket = new Socket("localhost", 12345);
-    PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-    BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-    out.println("Hello Server");
-    String response = in.readLine();
-    System.out.println("Server response: " + response);
-
-    in.close();
-    out.close();
-    socket.close();
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "In this example, the server listens for connections on port 12345 and responds to messages from the client. The client connects to the server, sends a message, and prints the server's response.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 11.2: HTTP Networking",
-    },
-    {
-      type: "point",
-      text: "Using HTTP requests with `HttpURLConnection` for communication over the web.",
-    },
-    {
-      type: "point",
-      text: "The `HttpURLConnection` class is used to make HTTP requests and handle responses from web servers.",
-    },
-    {
-      type: "point",
-      text: "You can use methods like `setRequestMethod`, `getInputStream`, and `disconnect` to interact with the server and handle the response.",
-    },
-    {
-      type: "example",
-      code: `// HTTP request example
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-public class HttpExample {
-  public static void main(String[] args) throws Exception {
-    URL url = new URL("https://jsonplaceholder.typicode.com/posts/1");
-    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-    connection.setRequestMethod("GET");
-
-    BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-    String inputLine;
-    StringBuilder content = new StringBuilder();
-
-    while ((inputLine = in.readLine()) != null) {
-      content.append(inputLine);
-    }
-
-    in.close();
-    connection.disconnect();
-
-    System.out.println("Response: " + content.toString());
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "This example demonstrates how to perform a GET request to a web API, read the response, and output it. The `HttpURLConnection` is configured to make the request and handle the response appropriately.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 11.3: Advanced Networking Techniques",
-    },
-    {
-      type: "point",
-      text: "Advanced networking techniques include handling different types of HTTP requests, managing cookies, and dealing with various response codes.",
-    },
-    {
-      type: "point",
-      text: "Understanding these advanced techniques allows for more robust and interactive network communication, such as handling POST requests and managing authentication.",
-    },
-    {
-      type: "example",
-      code: `// Advanced HTTP request example: POST request with JSON
-import java.io.OutputStream;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-public class AdvancedHttpExample {
-  public static void main(String[] args) throws Exception {
-    URL url = new URL("https://jsonplaceholder.typicode.com/posts");
-    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-    connection.setRequestMethod("POST");
-    connection.setRequestProperty("Content-Type", "application/json; utf-8");
-    connection.setRequestProperty("Accept", "application/json");
-    connection.setDoOutput(true);
-
-    String jsonInputString = "{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}";
-
-    try (OutputStream os = connection.getOutputStream()) {
-      byte[] input = jsonInputString.getBytes("utf-8");
-      os.write(input, 0, input.length);
-    }
-
-    BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "utf-8"));
-    String inputLine;
-    StringBuilder response = new StringBuilder();
-
-    while ((inputLine = in.readLine()) != null) {
-      response.append(inputLine.trim());
-    }
-
-    in.close();
-    connection.disconnect();
-
-    System.out.println("Response: " + response.toString());
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "In this example, a POST request is made to send JSON data to the server. The request headers are set for content type and accepted response format. The response from the server is read and printed.",
-    },
-],
-module12: [
-    {
-      type: 'margin'
-    },
-    {
-      type: "header",
-      level: 2,
-      text: "Module 12: Java Database Connectivity (JDBC)",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 12.1: Introduction to JDBC",
-    },
-    {
-      type: "point",
-      text: "Connecting to a database and executing queries.",
-    },
-    {
-      type: "point",
-      text: "JDBC (Java Database Connectivity) is an API that allows Java applications to interact with databases using SQL.",
-    },
-    {
-      type: "point",
-      text: "The `DriverManager` class is used to establish a connection to the database. You need to specify the database URL, username, and password.",
-    },
-    {
-      type: "point",
-      text: "A `Statement` object is used to execute SQL queries. The `ResultSet` object holds the results returned by the query.",
-    },
-    {
-      type: "example",
-      code: `// JDBC example
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
-public class JdbcExample {
-  public static void main(String[] args) {
-    String url = "jdbc:mysql://localhost:3306/mydatabase";
-    String user = "root";
-    String password = "password";
-
-    try (Connection connection = DriverManager.getConnection(url, user, password);
-         Statement statement = connection.createStatement();
-         ResultSet resultSet = statement.executeQuery("SELECT * FROM mytable")) {
-
-      while (resultSet.next()) {
-        System.out.println("ID: " + resultSet.getInt("id") + ", Name: " + resultSet.getString("name"));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null) {
+        out.println("Server received: " + inputLine);
       }
 
-    } catch (Exception e) {
-      e.printStackTrace();
+      in.close();
+      out.close();
+      clientSocket.close();
+      serverSocket.close();
     }
   }
-}`,
-    },
-    {
-      type: "point",
-      text: "This example demonstrates connecting to a MySQL database, executing a query to retrieve data from a table, and processing the results.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 12.2: Prepared Statements and Transactions",
-    },
-    {
-      type: "point",
-      text: "Using prepared statements to prevent SQL injection and manage transactions for maintaining data integrity.",
-    },
-    {
-      type: "point",
-      text: "Prepared statements are precompiled SQL statements that improve performance and security by avoiding SQL injection attacks.",
-    },
-    {
-      type: "point",
-      text: "Transactions are used to ensure that a series of database operations are completed successfully or not at all, maintaining the integrity of the database.",
-    },
-    {
-      type: "example",
-      code: `// Prepared Statement and Transaction example
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
-public class JdbcPreparedStatementExample {
-  public static void main(String[] args) {
-    String url = "jdbc:mysql://localhost:3306/mydatabase";
-    String user = "root";
-    String password = "password";
+  // Client code
+  import java.io.*;
+  import java.net.*;
 
-    try (Connection connection = DriverManager.getConnection(url, user, password)) {
-      connection.setAutoCommit(false); // Disable auto-commit mode
+  public class SimpleClient {
+    public static void main(String[] args) throws IOException {
+      Socket socket = new Socket("localhost", 12345);
+      PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+      BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-      String insertSQL = "INSERT INTO mytable (name) VALUES (?)";
-      try (PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
-        preparedStatement.setString(1, "John Doe");
-        preparedStatement.executeUpdate();
+      out.println("Hello Server");
+      String response = in.readLine();
+      System.out.println("Server response: " + response);
 
-        // Commit transaction
-        connection.commit();
-      } catch (SQLException e) {
-        // Rollback transaction on error
-        connection.rollback();
+      in.close();
+      out.close();
+      socket.close();
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "In this example, the server listens for connections on port 12345 and responds to messages from the client. The client connects to the server, sends a message, and prints the server's response.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 12.2: HTTP Networking",
+      },
+      {
+        type: "point",
+        text: "Using HTTP requests with `HttpURLConnection` for communication over the web.",
+      },
+      {
+        type: "point",
+        text: "The `HttpURLConnection` class is used to make HTTP requests and handle responses from web servers.",
+      },
+      {
+        type: "point",
+        text: "You can use methods like `setRequestMethod`, `getInputStream`, and `disconnect` to interact with the server and handle the response.",
+      },
+      {
+        type: "example",
+        code: `// HTTP request example
+  import java.io.BufferedReader;
+  import java.io.InputStreamReader;
+  import java.net.HttpURLConnection;
+  import java.net.URL;
+
+  public class HttpExample {
+    public static void main(String[] args) throws Exception {
+      URL url = new URL("https://jsonplaceholder.typicode.com/posts/1");
+      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+      connection.setRequestMethod("GET");
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+      String inputLine;
+      StringBuilder content = new StringBuilder();
+
+      while ((inputLine = in.readLine()) != null) {
+        content.append(inputLine);
+      }
+
+      in.close();
+      connection.disconnect();
+
+      System.out.println("Response: " + content.toString());
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "This example demonstrates how to perform a GET request to a web API, read the response, and output it. The `HttpURLConnection` is configured to make the request and handle the response appropriately.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 12.3: Advanced Networking Techniques",
+      },
+      {
+        type: "point",
+        text: "Advanced networking techniques include handling different types of HTTP requests, managing cookies, and dealing with various response codes.",
+      },
+      {
+        type: "point",
+        text: "Understanding these advanced techniques allows for more robust and interactive network communication, such as handling POST requests and managing authentication.",
+      },
+      {
+        type: "example",
+        code: `// Advanced HTTP request example: POST request with JSON
+  import java.io.OutputStream;
+  import java.io.BufferedReader;
+  import java.io.InputStreamReader;
+  import java.net.HttpURLConnection;
+  import java.net.URL;
+
+  public class AdvancedHttpExample {
+    public static void main(String[] args) throws Exception {
+      URL url = new URL("https://jsonplaceholder.typicode.com/posts");
+      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+      connection.setRequestMethod("POST");
+      connection.setRequestProperty("Content-Type", "application/json; utf-8");
+      connection.setRequestProperty("Accept", "application/json");
+      connection.setDoOutput(true);
+
+      String jsonInputString = "{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}";
+
+      try (OutputStream os = connection.getOutputStream()) {
+        byte[] input = jsonInputString.getBytes("utf-8");
+        os.write(input, 0, input.length);
+      }
+
+      BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "utf-8"));
+      String inputLine;
+      StringBuilder response = new StringBuilder();
+
+      while ((inputLine = in.readLine()) != null) {
+        response.append(inputLine.trim());
+      }
+
+      in.close();
+      connection.disconnect();
+
+      System.out.println("Response: " + response.toString());
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "In this example, a POST request is made to send JSON data to the server. The request headers are set for content type and accepted response format. The response from the server is read and printed.",
+      },
+  ],
+  module13: [
+      {
+        type: 'margin'
+      },
+      {
+        type: "header",
+        level: 2,
+        text: "Module 13: Java Database Connectivity (JDBC)",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 13.1: Introduction to JDBC",
+      },
+      {
+        type: "point",
+        text: "Connecting to a database and executing queries.",
+      },
+      {
+        type: "point",
+        text: "JDBC (Java Database Connectivity) is an API that allows Java applications to interact with databases using SQL.",
+      },
+      {
+        type: "point",
+        text: "The `DriverManager` class is used to establish a connection to the database. You need to specify the database URL, username, and password.",
+      },
+      {
+        type: "point",
+        text: "A `Statement` object is used to execute SQL queries. The `ResultSet` object holds the results returned by the query.",
+      },
+      {
+        type: "example",
+        code: `// JDBC example
+  import java.sql.Connection;
+  import java.sql.DriverManager;
+  import java.sql.ResultSet;
+  import java.sql.Statement;
+
+  public class JdbcExample {
+    public static void main(String[] args) {
+      String url = "jdbc:mysql://localhost:3306/mydatabase";
+      String user = "root";
+      String password = "password";
+
+      try (Connection connection = DriverManager.getConnection(url, user, password);
+          Statement statement = connection.createStatement();
+          ResultSet resultSet = statement.executeQuery("SELECT * FROM mytable")) {
+
+        while (resultSet.next()) {
+          System.out.println("ID: " + resultSet.getInt("id") + ", Name: " + resultSet.getString("name"));
+        }
+
+      } catch (Exception e) {
         e.printStackTrace();
       }
-
-    } catch (Exception e) {
-      e.printStackTrace();
     }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "In this example, a transaction is started by setting `autoCommit` to `false`. After executing the prepared statement, the transaction is committed if successful. If an error occurs, the transaction is rolled back to maintain data integrity.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 12.3: Handling Database Metadata and Batch Processing",
-    },
-    {
-      type: "point",
-      text: "Retrieving database metadata and performing batch processing for efficiency.",
-    },
-    {
-      type: "point",
-      text: "Database metadata can provide information about database structure, such as tables, columns, and data types, using the `DatabaseMetaData` class.",
-    },
-    {
-      type: "point",
-      text: "Batch processing allows multiple SQL statements to be executed as a batch, improving performance by reducing the number of database round-trips.",
-    },
-    {
-      type: "example",
-      code: `// Database Metadata and Batch Processing example
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+  }`,
+      },
+      {
+        type: "point",
+        text: "This example demonstrates connecting to a MySQL database, executing a query to retrieve data from a table, and processing the results.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 13.2: Prepared Statements and Transactions",
+      },
+      {
+        type: "point",
+        text: "Using prepared statements to prevent SQL injection and manage transactions for maintaining data integrity.",
+      },
+      {
+        type: "point",
+        text: "Prepared statements are precompiled SQL statements that improve performance and security by avoiding SQL injection attacks.",
+      },
+      {
+        type: "point",
+        text: "Transactions are used to ensure that a series of database operations are completed successfully or not at all, maintaining the integrity of the database.",
+      },
+      {
+        type: "example",
+        code: `// Prepared Statement and Transaction example
+  import java.sql.Connection;
+  import java.sql.DriverManager;
+  import java.sql.PreparedStatement;
+  import java.sql.SQLException;
 
-public class JdbcAdvancedExample {
-  public static void main(String[] args) {
-    String url = "jdbc:mysql://localhost:3306/mydatabase";
-    String user = "root";
-    String password = "password";
+  public class JdbcPreparedStatementExample {
+    public static void main(String[] args) {
+      String url = "jdbc:mysql://localhost:3306/mydatabase";
+      String user = "root";
+      String password = "password";
 
-    try (Connection connection = DriverManager.getConnection(url, user, password)) {
-      // Retrieve database metadata
-      DatabaseMetaData metaData = connection.getMetaData();
-      System.out.println("Database Product Name: " + metaData.getDatabaseProductName());
-      System.out.println("Database Product Version: " + metaData.getDatabaseProductVersion());
+      try (Connection connection = DriverManager.getConnection(url, user, password)) {
+        connection.setAutoCommit(false); // Disable auto-commit mode
 
-      // Batch processing
-      try (Statement statement = connection.createStatement()) {
-        statement.addBatch("INSERT INTO mytable (name) VALUES ('Alice')");
-        statement.addBatch("INSERT INTO mytable (name) VALUES ('Bob')");
-        statement.addBatch("INSERT INTO mytable (name) VALUES ('Charlie')");
-        
-        int[] updateCounts = statement.executeBatch();
-        System.out.println("Batch executed. Number of rows affected: " + updateCounts.length);
+        String insertSQL = "INSERT INTO mytable (name) VALUES (?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
+          preparedStatement.setString(1, "John Doe");
+          preparedStatement.executeUpdate();
+
+          // Commit transaction
+          connection.commit();
+        } catch (SQLException e) {
+          // Rollback transaction on error
+          connection.rollback();
+          e.printStackTrace();
+        }
+
+      } catch (Exception e) {
+        e.printStackTrace();
       }
-
-    } catch (Exception e) {
-      e.printStackTrace();
     }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "This example shows how to retrieve metadata about the database and perform batch processing. Metadata provides information about the database system, while batch processing groups multiple SQL statements to be executed together for efficiency.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 12.4: Error Handling and Connection Management",
-    },
-    {
-      type: "point",
-      text: "Handling SQL exceptions and managing database connections effectively.",
-    },
-    {
-      type: "point",
-      text: "Handling SQL exceptions is crucial for debugging and ensuring that your application can recover gracefully from database errors.",
-    },
-    {
-      type: "point",
-      text: "Proper connection management involves closing connections, statements, and result sets to avoid resource leaks and ensure optimal performance.",
-    },
-    {
-      type: "example",
-      code: `// Error Handling and Connection Management example
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+  }`,
+      },
+      {
+        type: "point",
+        text: "In this example, a transaction is started by setting `autoCommit` to `false`. After executing the prepared statement, the transaction is committed if successful. If an error occurs, the transaction is rolled back to maintain data integrity.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 13.3: Handling Database Metadata and Batch Processing",
+      },
+      {
+        type: "point",
+        text: "Retrieving database metadata and performing batch processing for efficiency.",
+      },
+      {
+        type: "point",
+        text: "Database metadata can provide information about database structure, such as tables, columns, and data types, using the `DatabaseMetaData` class.",
+      },
+      {
+        type: "point",
+        text: "Batch processing allows multiple SQL statements to be executed as a batch, improving performance by reducing the number of database round-trips.",
+      },
+      {
+        type: "example",
+        code: `// Database Metadata and Batch Processing example
+  import java.sql.Connection;
+  import java.sql.DatabaseMetaData;
+  import java.sql.DriverManager;
+  import java.sql.PreparedStatement;
+  import java.sql.SQLException;
+  import java.sql.Statement;
 
-public class JdbcErrorHandlingExample {
-  public static void main(String[] args) {
-    String url = "jdbc:mysql://localhost:3306/mydatabase";
-    String user = "root";
-    String password = "password";
+  public class JdbcAdvancedExample {
+    public static void main(String[] args) {
+      String url = "jdbc:mysql://localhost:3306/mydatabase";
+      String user = "root";
+      String password = "password";
 
-    try (Connection connection = DriverManager.getConnection(url, user, password)) {
-      String insertSQL = "INSERT INTO mytable (name) VALUES (?)";
-      try (PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
-        preparedStatement.setString(1, "Jane Doe");
-        preparedStatement.executeUpdate();
+      try (Connection connection = DriverManager.getConnection(url, user, password)) {
+        // Retrieve database metadata
+        DatabaseMetaData metaData = connection.getMetaData();
+        System.out.println("Database Product Name: " + metaData.getDatabaseProductName());
+        System.out.println("Database Product Version: " + metaData.getDatabaseProductVersion());
+
+        // Batch processing
+        try (Statement statement = connection.createStatement()) {
+          statement.addBatch("INSERT INTO mytable (name) VALUES ('Alice')");
+          statement.addBatch("INSERT INTO mytable (name) VALUES ('Bob')");
+          statement.addBatch("INSERT INTO mytable (name) VALUES ('Charlie')");
+          
+          int[] updateCounts = statement.executeBatch();
+          System.out.println("Batch executed. Number of rows affected: " + updateCounts.length);
+        }
+
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "This example shows how to retrieve metadata about the database and perform batch processing. Metadata provides information about the database system, while batch processing groups multiple SQL statements to be executed together for efficiency.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 13.4: Error Handling and Connection Management",
+      },
+      {
+        type: "point",
+        text: "Handling SQL exceptions and managing database connections effectively.",
+      },
+      {
+        type: "point",
+        text: "Handling SQL exceptions is crucial for debugging and ensuring that your application can recover gracefully from database errors.",
+      },
+      {
+        type: "point",
+        text: "Proper connection management involves closing connections, statements, and result sets to avoid resource leaks and ensure optimal performance.",
+      },
+      {
+        type: "example",
+        code: `// Error Handling and Connection Management example
+  import java.sql.Connection;
+  import java.sql.DriverManager;
+  import java.sql.PreparedStatement;
+  import java.sql.SQLException;
+
+  public class JdbcErrorHandlingExample {
+    public static void main(String[] args) {
+      String url = "jdbc:mysql://localhost:3306/mydatabase";
+      String user = "root";
+      String password = "password";
+
+      try (Connection connection = DriverManager.getConnection(url, user, password)) {
+        String insertSQL = "INSERT INTO mytable (name) VALUES (?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
+          preparedStatement.setString(1, "Jane Doe");
+          preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+          System.err.println("Error executing SQL statement: " + e.getMessage());
+        }
       } catch (SQLException e) {
-        System.err.println("Error executing SQL statement: " + e.getMessage());
+        System.err.println("Error connecting to the database: " + e.getMessage());
       }
-    } catch (SQLException e) {
-      System.err.println("Error connecting to the database: " + e.getMessage());
     }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "This example illustrates proper error handling for SQL operations and database connections. It ensures that exceptions are caught and logged, and resources are closed properly.",
-    },
-],
-module13: [
-    {
-      type: 'margin'
-    },
-    {
-      type: "header",
-      level: 2,
-      text: "Module 13: Java Reflection and Annotations",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 13.1: Understanding Reflection",
-    },
-    {
-      type: "point",
-      text: "Using reflection to inspect and manipulate classes at runtime.",
-    },
-    {
-      type: "point",
-      text: "Reflection in Java allows you to analyze and interact with classes, methods, fields, and other elements of the Java language at runtime, providing flexibility and introspection capabilities.",
-    },
-    {
-      type: "point",
-      text: "The `Class` class is the entry point for reflection. You can obtain a `Class` object representing a class or interface using methods like `Class.forName()`, `.getClass()`, or `.class`.",
-    },
-    {
-      type: "point",
-      text: "You can inspect class details (e.g., methods, fields, constructors) using methods of the `Class` class, such as `getDeclaredMethods()`, `getDeclaredFields()`, and `getConstructors()`. You can also manipulate fields and invoke methods dynamically.",
-    },
-    {
-      type: "example",
-      code: `// Reflection example
-import java.lang.reflect.Method;
-
-public class ReflectionExample {
-  public static void main(String[] args) throws Exception {
-    Class<?> clazz = Class.forName("java.lang.String");
-    Method[] methods = clazz.getDeclaredMethods();
-
-    for (Method method : methods) {
-      System.out.println("Method: " + method.getName());
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "In this example, we use reflection to inspect the `java.lang.String` class. We retrieve and print the names of all declared methods in the `String` class.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 13.2: Annotations in Java",
-    },
-    {
-      type: "point",
-      text: "Creating and using custom annotations for metadata and runtime processing.",
-    },
-    {
-      type: "point",
-      text: "Annotations are a form of metadata that provide additional information about code elements (e.g., classes, methods, fields). They do not affect program semantics but can be used by the compiler or runtime environment for various purposes.",
-    },
-    {
-      type: "point",
-      text: "Custom annotations are defined using the `@interface` keyword. Annotations can include elements (methods) that can be used to provide values.",
-    },
-    {
-      type: "point",
-      text: "Annotations can be retained at runtime or compile-time. The `@Retention` annotation specifies how long annotations are retained. Use `RetentionPolicy.RUNTIME` for runtime processing.",
-    },
-    {
-      type: "example",
-      code: `// Custom annotation example
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
-@Retention(RetentionPolicy.RUNTIME)
-@interface MyCustomAnnotation {
-  String value();
-}
-
-public class AnnotationExample {
-  @MyCustomAnnotation("Example")
-  public void annotatedMethod() {
-    System.out.println("Method with MyCustomAnnotation");
-  }
-
-  public static void main(String[] args) throws Exception {
-    AnnotationExample example = new AnnotationExample();
-    example.annotatedMethod();
-
-    // Checking for annotation
-    MyCustomAnnotation annotation = example.getClass()
-                    .getMethod("annotatedMethod")
-                    .getAnnotation(MyCustomAnnotation.class);
-
-    if (annotation != null) {
-      System.out.println("Annotation value: " + annotation.value());
-    }
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "In this example, we define a custom annotation `@MyCustomAnnotation` with a single element `value`. We apply this annotation to a method and then retrieve and print the annotation value using reflection.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 13.3: Practical Uses of Reflection and Annotations",
-    },
-    {
-      type: "point",
-      text: "Exploring practical applications of reflection and annotations in Java.",
-    },
-    {
-      type: "point",
-      text: "Reflection is often used in frameworks and libraries to provide features such as dependency injection, serialization, and object mapping. It allows these tools to interact with objects dynamically without needing compile-time knowledge.",
-    },
-    {
-      type: "point",
-      text: "Annotations are commonly used in Java frameworks such as Spring and Hibernate to define configuration, behavior, and mappings in a declarative manner. For example, `@Autowired` in Spring and `@Entity` in Hibernate.",
-    },
-    {
-      type: "example",
-      code: `// Example of using reflection for a simple dependency injection framework
-import java.lang.reflect.Constructor;
-
-public class SimpleDIContainer {
-  public static void main(String[] args) throws Exception {
-    // Assuming we have a class 'MyService' with a constructor
-    Class<?> clazz = Class.forName("MyService");
-    Constructor<?> constructor = clazz.getConstructor();
-    Object instance = constructor.newInstance();
-
-    System.out.println("Created instance of: " + instance.getClass().getName());
-  }
-}
-
-// A sample service class
-class MyService {
-  public MyService() {
-    System.out.println("MyService instance created");
-  }
-}`,
-    },
-    {
-      type: "point",
-      text: "In this example, we demonstrate a simple dependency injection mechanism using reflection. We create an instance of `MyService` using reflection to call its constructor. This is a simplified version of what frameworks like Spring do under the hood.",
-    },
-],
+  }`,
+      },
+      {
+        type: "point",
+        text: "This example illustrates proper error handling for SQL operations and database connections. It ensures that exceptions are caught and logged, and resources are closed properly.",
+      },
+  ],
   module14: [
+      {
+        type: 'margin'
+      },
+      {
+        type: "header",
+        level: 2,
+        text: "Module 14: Java Reflection and Annotations",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 14.1: Understanding Reflection",
+      },
+      {
+        type: "point",
+        text: "Using reflection to inspect and manipulate classes at runtime.",
+      },
+      {
+        type: "point",
+        text: "Reflection in Java allows you to analyze and interact with classes, methods, fields, and other elements of the Java language at runtime, providing flexibility and introspection capabilities.",
+      },
+      {
+        type: "point",
+        text: "The `Class` class is the entry point for reflection. You can obtain a `Class` object representing a class or interface using methods like `Class.forName()`, `.getClass()`, or `.class`.",
+      },
+      {
+        type: "point",
+        text: "You can inspect class details (e.g., methods, fields, constructors) using methods of the `Class` class, such as `getDeclaredMethods()`, `getDeclaredFields()`, and `getConstructors()`. You can also manipulate fields and invoke methods dynamically.",
+      },
+      {
+        type: "example",
+        code: `// Reflection example
+  import java.lang.reflect.Method;
+
+  public class ReflectionExample {
+    public static void main(String[] args) throws Exception {
+      Class<?> clazz = Class.forName("java.lang.String");
+      Method[] methods = clazz.getDeclaredMethods();
+
+      for (Method method : methods) {
+        System.out.println("Method: " + method.getName());
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "In this example, we use reflection to inspect the `java.lang.String` class. We retrieve and print the names of all declared methods in the `String` class.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 14.2: Annotations in Java",
+      },
+      {
+        type: "point",
+        text: "Creating and using custom annotations for metadata and runtime processing.",
+      },
+      {
+        type: "point",
+        text: "Annotations are a form of metadata that provide additional information about code elements (e.g., classes, methods, fields). They do not affect program semantics but can be used by the compiler or runtime environment for various purposes.",
+      },
+      {
+        type: "point",
+        text: "Custom annotations are defined using the `@interface` keyword. Annotations can include elements (methods) that can be used to provide values.",
+      },
+      {
+        type: "point",
+        text: "Annotations can be retained at runtime or compile-time. The `@Retention` annotation specifies how long annotations are retained. Use `RetentionPolicy.RUNTIME` for runtime processing.",
+      },
+      {
+        type: "example",
+        code: `// Custom annotation example
+  import java.lang.annotation.Retention;
+  import java.lang.annotation.RetentionPolicy;
+
+  @Retention(RetentionPolicy.RUNTIME)
+  @interface MyCustomAnnotation {
+    String value();
+  }
+
+  public class AnnotationExample {
+    @MyCustomAnnotation("Example")
+    public void annotatedMethod() {
+      System.out.println("Method with MyCustomAnnotation");
+    }
+
+    public static void main(String[] args) throws Exception {
+      AnnotationExample example = new AnnotationExample();
+      example.annotatedMethod();
+
+      // Checking for annotation
+      MyCustomAnnotation annotation = example.getClass()
+                      .getMethod("annotatedMethod")
+                      .getAnnotation(MyCustomAnnotation.class);
+
+      if (annotation != null) {
+        System.out.println("Annotation value: " + annotation.value());
+      }
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "In this example, we define a custom annotation `@MyCustomAnnotation` with a single element `value`. We apply this annotation to a method and then retrieve and print the annotation value using reflection.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 14.3: Practical Uses of Reflection and Annotations",
+      },
+      {
+        type: "point",
+        text: "Exploring practical applications of reflection and annotations in Java.",
+      },
+      {
+        type: "point",
+        text: "Reflection is often used in frameworks and libraries to provide features such as dependency injection, serialization, and object mapping. It allows these tools to interact with objects dynamically without needing compile-time knowledge.",
+      },
+      {
+        type: "point",
+        text: "Annotations are commonly used in Java frameworks such as Spring and Hibernate to define configuration, behavior, and mappings in a declarative manner. For example, `@Autowired` in Spring and `@Entity` in Hibernate.",
+      },
+      {
+        type: "example",
+        code: `// Example of using reflection for a simple dependency injection framework
+  import java.lang.reflect.Constructor;
+
+  public class SimpleDIContainer {
+    public static void main(String[] args) throws Exception {
+      // Assuming we have a class 'MyService' with a constructor
+      Class<?> clazz = Class.forName("MyService");
+      Constructor<?> constructor = clazz.getConstructor();
+      Object instance = constructor.newInstance();
+
+      System.out.println("Created instance of: " + instance.getClass().getName());
+    }
+  }
+
+  // A sample service class
+  class MyService {
+    public MyService() {
+      System.out.println("MyService instance created");
+    }
+  }`,
+      },
+      {
+        type: "point",
+        text: "In this example, we demonstrate a simple dependency injection mechanism using reflection. We create an instance of `MyService` using reflection to call its constructor. This is a simplified version of what frameworks like Spring do under the hood.",
+      },
+  ],
+    module15: [
+      {
+        type: 'margin'
+      },
+      {
+        type: "header",
+        level: 2,
+        text: "Module 15: Building Java Applications",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 15.1: Building a Simple Java Application",
+      },
+      {
+        type: "point",
+        text: "Setting up a project structure.",
+      },
+      {
+        type: "point",
+        text: "A well-organized project structure improves maintainability and scalability. A standard Maven project structure includes separate directories for main source code and test code.",
+      },
+      {
+        type: "point",
+        text: "Here is a basic Maven project structure:",
+      },
+      {
+        type: "example",
+        code: `// Basic project structure
+  src/
+    main/
+      java/
+        com/
+          example/
+            App.java
+    test/
+      java/
+        com/
+          example/
+            AppTest.java
+  pom.xml
+  `,
+      },
+      {
+        type: "point",
+        text: `In this structure:
+        - src/main/java/ contains the main application code.
+        - src/test/java/ contains test code.
+        - pom.xml is the Maven build configuration file that manages project dependencies and build lifecycle.`,
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 15.2: Implementing Core Features and Functionalities",
+      },
+      {
+        type: "point",
+        text: "Implementing core features involves writing the main application logic and ensuring that it meets the requirements. It’s important to follow good coding practices and maintain code quality.",
+      },
+      {
+        type: "point",
+        text: "In the example below, we create a basic Java application with a greeting feature and a corresponding JUnit test case.",
+      },
+      {
+        type: "example",
+        code: `// Core functionality - App.java
+  package com.example;
+
+  public class App {
+    public static void main(String[] args) {
+      App app = new App();
+      System.out.println(app.getGreeting());
+    }
+
+    public String getGreeting() {
+      return "Welcome to the Java Application!";
+    }
+  }
+
+  // Testing functionality - AppTest.java
+  package com.example;
+
+  import static org.junit.Assert.assertEquals;
+  import org.junit.Test;
+
+  public class AppTest {
+    @Test
+    public void testGreeting() {
+      App app = new App();
+      assertEquals("Welcome to the Java Application!", app.getGreeting());
+    }
+  }
+  `,
+      },
+      {
+        type: "point",
+        text: "The `App` class contains a `getGreeting` method that returns a greeting string. The `AppTest` class uses JUnit to test that the `getGreeting` method returns the expected string.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 15.3: Building, Deploying, and Running the Application",
+      },
+      {
+        type: "point",
+        text: "After implementing the core features, you need to build, deploy, and run the application. Maven is commonly used for building and managing Java projects.",
+      },
+      {
+        type: "point",
+        text: "Build the application using Maven. This will compile the code, run tests, and package the application into a JAR file.",
+      },
+      {
+        type: "example",
+        code: `// Build and run commands
+  // Run these commands from the root directory of your project where the pom.xml file is located.
+
+  mvn clean package   // Cleans previous builds and packages the application
+
+  java -jar target/app.jar  // Runs the packaged JAR file
+  `,
+      },
+      {
+        type: "point",
+        text: "The `mvn clean package` command cleans any previously compiled files and then packages the application into a JAR file located in the `target` directory. The `java -jar` command runs the JAR file.",
+      },
+      {
+        type: "header",
+        level: 3,
+        text: "Lesson 15.4: Continuous Integration and Deployment",
+      },
+      {
+        type: "point",
+        text: "Integrating Continuous Integration (CI) and Continuous Deployment (CD) practices into your workflow can streamline development, testing, and deployment processes.",
+      },
+      {
+        type: "point",
+        text: "Tools like Jenkins, Travis CI, and GitHub Actions can automate the build, test, and deployment pipeline. For instance, a CI/CD pipeline can automatically build and deploy the application whenever changes are pushed to the repository.",
+      },
+      {
+        type: "example",
+        code: `// Example of a simple GitHub Actions workflow file (.github/workflows/ci.yml)
+  name: Java CI
+
+  on:
+    push:
+      branches: [main]
+
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+      - name: Build with Maven
+        run: mvn clean package
+  `,
+      },
+      {
+        type: "point",
+        text: "This GitHub Actions workflow sets up a JDK environment, checks out the code, and builds the project using Maven. You can extend this workflow to include deployment steps as needed.",
+      },
+  ],
+  module16: [
     {
       type: 'margin'
     },
     {
       type: "header",
       level: 2,
-      text: "Module 14: Building Java Applications",
+      text: "Module 16: Java Development Tools",
     },
     {
       type: "header",
       level: 3,
-      text: "Lesson 14.1: Building a Simple Java Application",
-    },
-    {
-      type: "point",
-      text: "Setting up a project structure.",
-    },
-    {
-      type: "point",
-      text: "A well-organized project structure improves maintainability and scalability. A standard Maven project structure includes separate directories for main source code and test code.",
-    },
-    {
-      type: "point",
-      text: "Here is a basic Maven project structure:",
-    },
-    {
-      type: "example",
-      code: `// Basic project structure
-src/
-  main/
-    java/
-      com/
-        example/
-          App.java
-  test/
-    java/
-      com/
-        example/
-          AppTest.java
-pom.xml
-`,
-    },
-    {
-      type: "point",
-      text: `In this structure:
-      - src/main/java/ contains the main application code.
-      - src/test/java/ contains test code.
-      - pom.xml is the Maven build configuration file that manages project dependencies and build lifecycle.`,
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 14.2: Implementing Core Features and Functionalities",
-    },
-    {
-      type: "point",
-      text: "Implementing core features involves writing the main application logic and ensuring that it meets the requirements. It’s important to follow good coding practices and maintain code quality.",
-    },
-    {
-      type: "point",
-      text: "In the example below, we create a basic Java application with a greeting feature and a corresponding JUnit test case.",
-    },
-    {
-      type: "example",
-      code: `// Core functionality - App.java
-package com.example;
-
-public class App {
-  public static void main(String[] args) {
-    App app = new App();
-    System.out.println(app.getGreeting());
-  }
-
-  public String getGreeting() {
-    return "Welcome to the Java Application!";
-  }
-}
-
-// Testing functionality - AppTest.java
-package com.example;
-
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
-
-public class AppTest {
-  @Test
-  public void testGreeting() {
-    App app = new App();
-    assertEquals("Welcome to the Java Application!", app.getGreeting());
-  }
-}
-`,
-    },
-    {
-      type: "point",
-      text: "The `App` class contains a `getGreeting` method that returns a greeting string. The `AppTest` class uses JUnit to test that the `getGreeting` method returns the expected string.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 14.3: Building, Deploying, and Running the Application",
-    },
-    {
-      type: "point",
-      text: "After implementing the core features, you need to build, deploy, and run the application. Maven is commonly used for building and managing Java projects.",
-    },
-    {
-      type: "point",
-      text: "Build the application using Maven. This will compile the code, run tests, and package the application into a JAR file.",
-    },
-    {
-      type: "example",
-      code: `// Build and run commands
-// Run these commands from the root directory of your project where the pom.xml file is located.
-
-mvn clean package   // Cleans previous builds and packages the application
-
-java -jar target/app.jar  // Runs the packaged JAR file
-`,
-    },
-    {
-      type: "point",
-      text: "The `mvn clean package` command cleans any previously compiled files and then packages the application into a JAR file located in the `target` directory. The `java -jar` command runs the JAR file.",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 14.4: Continuous Integration and Deployment",
-    },
-    {
-      type: "point",
-      text: "Integrating Continuous Integration (CI) and Continuous Deployment (CD) practices into your workflow can streamline development, testing, and deployment processes.",
-    },
-    {
-      type: "point",
-      text: "Tools like Jenkins, Travis CI, and GitHub Actions can automate the build, test, and deployment pipeline. For instance, a CI/CD pipeline can automatically build and deploy the application whenever changes are pushed to the repository.",
-    },
-    {
-      type: "example",
-      code: `// Example of a simple GitHub Actions workflow file (.github/workflows/ci.yml)
-name: Java CI
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-    - name: Build with Maven
-      run: mvn clean package
-`,
-    },
-    {
-      type: "point",
-      text: "This GitHub Actions workflow sets up a JDK environment, checks out the code, and builds the project using Maven. You can extend this workflow to include deployment steps as needed.",
-    },
-],
-
-  module15: [
-    {
-      type: 'margin'
-    },
-    {
-      type: "header",
-      level: 2,
-      text: "Module 15: Java Development Tools",
-    },
-    {
-      type: "header",
-      level: 3,
-      text: "Lesson 15.1: Using IDEs for Java Development",
+      text: "Lesson 16.1: Using IDEs for Java Development",
     },
     {
       type: "point",
@@ -3405,7 +4142,7 @@ jobs:
     {
       type: "header",
       level: 3,
-      text: "Lesson 15.2: Build Tools",
+      text: "Lesson 16.2: Build Tools",
     },
     {
       type: "point",
@@ -3477,7 +4214,7 @@ dependencies {
     {
       type: "header",
       level: 3,
-      text: "Lesson 15.3: Version Control Systems",
+      text: "Lesson 16.3: Version Control Systems",
     },
     {
       type: "point",
@@ -3538,7 +4275,7 @@ git push origin feature-branch
       text: `- ' git push origin branch-name ' : Pushes commits to the remote repository.`,
     },
     
-],
+  ],
 
   project1:[
     {

@@ -30,12 +30,13 @@ const initialCourses = [
   { id: 7, name: 'Module 7: Basic Input and Output', moduleKey: 'module7', completed: false },
   { id: 8, name: 'Module 8: Debugging and Error Handling', moduleKey: 'module8', completed: false },
   { id: 9, name: 'Module 9: Java Development Tools', moduleKey: 'module9', completed: false },
-  { id: 10, name: 'Module 10: Collections Framework', moduleKey: 'module10', completed: false },
-  { id: 11, name: 'Module 11: Java Streams and Lambdas', moduleKey: 'module11', completed: false },
-  { id: 12, name: 'Module 12: Multithreading and Concurrency', moduleKey: 'module12', completed: false },
-  { id: 13, name: 'Module 13: Networking in Java', moduleKey: 'module13', completed: false },
-  { id: 14, name: 'Module 14: Java Database Connectivity (JDBC)', moduleKey: 'module14', completed: false },
-  { id: 15, name: 'Module 15: Java Reflection and Annotations', moduleKey: 'module15', completed: false },
+  { id: 10, name: 'Module 10: GUI Development', moduleKey: 'module10', completed: false },
+  { id: 11, name: 'Module 11: Collections Framework', moduleKey: 'module11', completed: false },
+  { id: 12, name: 'Module 12: Java Streams and Lambdas', moduleKey: 'module12', completed: false },
+  { id: 13, name: 'Module 13: Multithreading and Concurrency', moduleKey: 'module13', completed: false },
+  { id: 14, name: 'Module 14: Networking in Java', moduleKey: 'module14', completed: false },
+  { id: 15, name: 'Module 15: Java Database Connectivity (JDBC)', moduleKey: 'module15', completed: false },
+  { id: 16, name: 'Module 16: Java Reflection and Annotations', moduleKey: 'module16', completed: false },
 ];
 const reviewedProjects = [
   { id: 1, name: 'Project 1: Introduction to Java', moduleKey: 'project1', completed: false },
@@ -173,7 +174,7 @@ const MyLearning = () => {
         <h3><FaJava />Java</h3>
         <div className="course-list">
           {courses.map(course => (
-            <div key={course.id} className="course-card">
+            <div key={course.id} className={course.completed ? "course-card completed" : "course-card"}>
               <h3>{course.name}</h3>
               {course.completed ? <FaCircleCheck className='blue' /> : <FaRegCircle />}
             </div>
@@ -186,10 +187,10 @@ const MyLearning = () => {
         <h2>Reviewed <span>Projects</span></h2>
         <h3><FaJava />Java Practise</h3>
         <div className="course-list">
-          {projects.map(course => (
-            <div key={course.id} className="course-card">
-              <h3>{course.name}</h3>
-              {course.completed ? <FaCircleCheck className='blue' /> : <FaRegCircle />}
+          {projects.map(project => (
+            <div key={project.id} className={project.completed ? "course-card completed" : "course-card"}>
+              <h3>{project.name}</h3>
+              {project.completed ? <FaCircleCheck className='blue' /> : <FaRegCircle />}
             </div>
           ))}
         </div>

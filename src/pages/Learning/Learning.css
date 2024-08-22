@@ -130,6 +130,15 @@
     top: 20px;
 }
 
+.completed{
+    border: 2px dotted var(--color-primary);
+}
+
+.completed h3{
+    color: #3333336d;
+    text-decoration: line-through;
+}
+
 @media (max-width: 290px) {
     .my-learning{
         padding: 10px;

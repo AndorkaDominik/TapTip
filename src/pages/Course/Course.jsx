@@ -92,37 +92,43 @@ const Course = () => {
                 </Link>
                 <Link to="/Java/module10/" onClick={scrollToTop}>
                     <div className='module-link'>
-                        <p><strong>Module 10:</strong> Multithreading and Concurrency</p>
+                        <p><strong>Module 10:</strong> GUI Development</p>
                         <p>Start now <FaArrowRight /></p>
                     </div>
                 </Link>
                 <Link to="/Java/module11/" onClick={scrollToTop}>
                     <div className='module-link'>
-                        <p><strong>Module 11:</strong> Networking in Java</p>
+                        <p><strong>Module 11:</strong> Multithreading and Concurrency</p>
                         <p>Start now <FaArrowRight /></p>
                     </div>
                 </Link>
                 <Link to="/Java/module12/" onClick={scrollToTop}>
                     <div className='module-link'>
-                        <p><strong>Module 12:</strong> Java Database Connectivity (JDBC)</p>
+                        <p><strong>Module 12:</strong> Networking in Java</p>
                         <p>Start now <FaArrowRight /></p>
                     </div>
                 </Link>
                 <Link to="/Java/module13/" onClick={scrollToTop}>
                     <div className='module-link'>
-                        <p><strong>Module 13:</strong> Java Reflection and Annotations</p>
+                        <p><strong>Module 13:</strong> Java Database Connectivity (JDBC)</p>
                         <p>Start now <FaArrowRight /></p>
                     </div>
                 </Link>
                 <Link to="/Java/module14/" onClick={scrollToTop}>
                     <div className='module-link'>
-                        <p><strong>Module 14:</strong> Building Java Applications</p>
+                        <p><strong>Module 14:</strong> Java Reflection and Annotations</p>
                         <p>Start now <FaArrowRight /></p>
                     </div>
                 </Link>
                 <Link to="/Java/module15/" onClick={scrollToTop}>
                     <div className='module-link'>
-                        <p><strong>Module 15:</strong> Java Development Tools</p>
+                        <p><strong>Module 15:</strong>  Building Java Applications</p>
+                        <p>Start now <FaArrowRight /></p>
+                    </div>
+                </Link>
+                <Link to="/Java/module16/" onClick={scrollToTop}>
+                    <div className='module-link'>
+                        <p><strong>Module 16:</strong> Java Development Tools</p>
                         <p>Start now <FaArrowRight /></p>
                     </div>
                 </Link>
