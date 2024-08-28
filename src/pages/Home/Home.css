@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
 .landing-page {
     font-family: Arial, sans-serif;
     color: #333;
@@ -6,16 +7,8 @@
 }
 
 .hero {
-    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
     min-height: 80vh;
-    align-items: center;
-    justify-content: center;
-    background: #f0f0f0;
-    text-align: center;
-    padding: .5rem;
     padding-top: 80px;
 }
 
@@ -27,6 +20,7 @@
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
+    margin-top: 0;
     line-height: 1;
 }
 
@@ -57,60 +51,43 @@
     animation: movement 1s ease infinite;
 }
 
-/* -------------------------- CODE ----------------------------*/
+/* -------------------------- Welcome ----------------------------*/
 .welcome {
     position: relative;
     margin-top: 50px;
-    background-color: var(--code-bg-color);
-    border-radius: 10px;
+    background-color: var(--bg-body);
     overflow: hidden;
     width: 100%;
-}
-
-.welcome .header {
-    display: grid;
-    padding: 7px 20px;
-    background: #1e2227;
-}
-
-.header .action-btn-container {
-    position: absolute;
+    background: url('../../assets//Img/welcome.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 350px;
     display: flex;
-    flex-direction: row;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
 }
 
-.header .action-btn-container div {
-    margin-top: 10px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.welcome p span {
+    color: var(--bg-body);
+    font-family: "Bebas Neue", sans-serif;    
+    font-size: 7rem;
+    z-index: 2;
+    position: relative;
 }
 
-.header .action-btn-container div:nth-child(1) {
-    background: #FF605C;
-}
-
-.header .action-btn-container div:nth-child(2) {
-    background: #FFBD44;
-}
-
-.header .action-btn-container div:nth-child(3) {
-    background: #00CA4E;
-}
-
-.welcome .header p {
-    color: var(--code-title-color);
-    margin-bottom: 0;
-    justify-self: center;
-    align-self: center;
-}
-
-.welcome img {
-    margin-top: 20px;
+.welcome::after {
+    content: '';
+    position: absolute;
     width: 100%;
-    height: auto;
-    /* Ensure image maintains aspect ratio */
+    height: 100%;
+    background: black;
+    opacity: .4;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 @keyframes movement {
@@ -133,13 +110,21 @@
 /* -------------------------- Why ----------------------------*/
 
 .hero .why-container {
+    margin: 0 auto;
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
     margin-top: 80px;
+    margin-bottom: 80px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+.hero .why-container p{
+    margin: 0 auto;
+    text-align: justify;
+}
+
 
 /* -------------------------- Need ----------------------------*/
 
@@ -201,64 +186,25 @@
     display: grid;
     margin: 0 auto;
     margin-bottom: 60px;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 .showcase h2 {
     margin-top: 70px;
 }
+
+.showcase p{
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+
 .showcase-content{
     display: grid;
     margin: 0 auto;
 }
 .showcase p:nth-child(3){
     text-align: center;
-    align-self: center;
-    justify-self: center;
     opacity: .7;
-}
-.showcase .logo-container {
-    position: relative;
-    width: 180px;
-    margin: 0 auto;
-}
-.showcase .logo-container div{
-    position: absolute;
-    background: #f5f5f5;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 15px 15px 45px #bebebe,
-        -10px -10px 40px #dcdcdc;
-}
-
-.showcase .logo-container div:nth-child(1) {
-    top: -10px;
-    right: 160px;
-}
-.showcase .logo-container div:nth-child(2) {
-    top: -30px;
-    right: 115px;
-}
-
-.showcase .logo-container div:nth-child(3) {
-    top: -40px;
-    right: 70px;
-}
-
-.showcase .logo-container div:nth-child(4) {
-    top: -30px;
-    right: 25px;
-}
-.showcase .logo-container div:nth-child(5) {
-    top: -10px;
-    right: -20px;
-}
-
-.showcase .logo-container img{
-    width: 25px;
 }
 
 /* Showcase content */
@@ -334,163 +280,99 @@
     overflow: visible;
 }
 
-/* Media Queries for Responsiveness */
-
-@media (min-width: 768px) {
-    .hero {
-        padding-top: 90px;
-    }
-
-    .hero h2{
-        max-width: 90%;
-    }
-
-    .hero .why-container {
-        grid-template-columns: .6fr 1fr;
-        gap: 50px;
-    }
-
-    .need .top {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .need .bottom {
-        grid-template-columns: 1fr 0.7fr;
-    }
-    .showcase-content .card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .showcase .logo-container {
-        width: 300px;
-    }
-
-    .showcase .logo-container div {
-        width: 50px;
-        height: 50px;
-    }
-
-    .showcase .logo-container div:nth-child(1) {
-        top: -10px;
-        right: 260px;
-    }
-
-    .showcase .logo-container div:nth-child(2) {
-        top: -40px;
-        right: 200px;
-    }
-
-    .showcase .logo-container div:nth-child(3) {
-        top: -50px;
-        right: 130px;
-        width: 55px;
-        height: 55px;
-    }
-
-    .showcase .logo-container div:nth-child(3) img {
-        width: 35px;
-    }
-
-    .showcase .logo-container div:nth-child(4) {
-        top: -40px;
-        right: 60px;
-    }
-
-    .showcase .logo-container div:nth-child(5) {
-        top: -10px;
-        right: 0px;
-    }
-
-        .showcase .logo-container img {
-            width: 30px;
-        }
+/* Cookie Consent Banner */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
 }
 
-@media (min-width: 1024px) {
-    .hero {
-        padding-top: 180px;
-    }
-    .hero h1 {
-        font-size: 4rem;
-    }
+.cookie-consent-banner p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
 
-    .hero p {
-        font-size: 1.2rem;
-    }
+.cookie-consent-banner button {
+    background-color: var(--color-primary);;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
 
-    .need .top .card,
-    .need .bottom .card {
-        max-height: none;
-    }
+.cookie-consent-banner button:hover {
+    background-color: #31682d;
+}
 
-    .showcase-content .card-container{
-        grid-template-columns: repeat(3, 1fr);
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1000px) {
+    .hero .why-container{
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 767px) {
-    
-    .hero h1 {
-        font-size: 2rem;
+    .hero h1{
+        font-size: 3rem;
     }
 
-    .hero p {
+    .hero h2{
+        font-size: 1.3rem;
+    }
+
+    .hero p{
         font-size: 1rem;
-        max-width: 90%;
-        margin: 0 auto;
         margin-bottom: 1rem;
     }
-    .hero:nth-child(1) p{
-        max-width: 400px;
+    .hero p:nth-child(2){
+        max-width: 330px;
     }
 
-    .hero .invite {
-        font-size: small;
-        padding: 10px;
-        width: 100px;
+    .welcome{
+        min-height: 200px;
+        padding-top: 45px;
     }
 
-    .need h2 {
-        text-align: center;
+    .welcome p span{
+        font-size: 4rem;
     }
 
-    .need .top {
-        grid-template-columns: 1fr;
-    }
-
-    .need .bottom {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 370px){
-    .showcase .card .top{
-        padding: 20px 30px;
-    }
-}
-
-@media (max-width: 274px) {
-    .showcase .card .bottom div p{
-        text-align: center;
-    }
-    .showcase .card .bottom div{
-        flex-direction: column;
-        height: fit-content;
-        gap: 10px;
-    }
-
-    .showcase .card .top img {
-        width: 50px;
-        padding: 12px;
+    .hero .why-container p{
+        margin: 0 auto;
     }
 
 }
 
-@media (max-width: 274px) {
-    .logo-container{
-        display: none;
+@media (max-width: 470px) {
+    .hero h1{
+        font-size: 28px;
     }
-    .showcase{
-        margin-top: 0;
+
+    .welcome p span{
+        font-size: 2.4rem;
+    }
+    .hero .why-container{
+        gap: 0;
+    }
+    .hero .why-container p{
+        padding: 0 10px;
     }
 }

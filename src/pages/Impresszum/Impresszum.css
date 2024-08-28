@@ -1,0 +1,37 @@
+.impresszum{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.impresszum h2{
+    margin-bottom: 20px;
+}
+
+.impresszum .container{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .7fr 1fr;
+}
+.impresszum .container .section:nth-child(1) {
+    grid-row: 1/3;
+    grid-column: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.impresszum .container .section:nth-child(2) {
+    border-top-right-radius: 10px;
+}
+.impresszum .container .section:nth-child(3) {
+    border-bottom-right-radius: 10px;
+}
+
+.impresszum .container .section{
+    text-align: left;
+    padding: 20px;
+}
+.impresszum .section {
+    background: var(--bg-highlight);
+}

@@ -6,14 +6,13 @@ import Navbar from './components/Navbar/Navbar.jsx';
 
 //pages
 import Home from './pages/Home/Home.jsx';
-import Course from './pages/Course/Course.jsx';
-import { courseData } from './constants/data'
-import CourseContent from './pages/CourseContent/CourseContent.jsx';
-import Learning from './pages/Learning/Learning.jsx';
-import Join from './pages/Join/Join.jsx';
-import Practise from './pages/Practise/Practise.jsx';
 
 import { Route, Routes } from 'react-router-dom'
+import Form from './pages/Form/Form.jsx';
+import Packages from './pages/packages/Packages.jsx';
+import Blog from './pages/Blog/Blog.jsx';
+import BlogPost from './components/BlogPost/BlogPost.jsx';
+import Impresszum from './pages/Impresszum/Impresszum.jsx';
 
 function App() {
 
@@ -22,35 +21,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Home />} />
-
-        <Route path="/Java/" element={<Course />} />
-        <Route path="/Java/module1" element={<CourseContent courseData={courseData.module1} module={"module1"} />} />
-        <Route path="/Java/module2" element={<CourseContent courseData={courseData.module2} module={"module2"} />} />
-        <Route path="/Java/module3" element={<CourseContent courseData={courseData.module3} module={"module3"} />} />
-        <Route path="/Java/module4" element={<CourseContent courseData={courseData.module4} module={"module4"} />} />
-        <Route path="/Java/module5" element={<CourseContent courseData={courseData.module5} module={"module5"} />} />
-        <Route path="/Java/module6" element={<CourseContent courseData={courseData.module6} module={"module6"} />} />
-        <Route path="/Java/module7" element={<CourseContent courseData={courseData.module7} module={"module7"} />} />
-        <Route path="/Java/module8" element={<CourseContent courseData={courseData.module8} module={"module8"} />} />
-        <Route path="/Java/module9" element={<CourseContent courseData={courseData.module9} module={"module9"} />} />
-        <Route path="/Java/module10" element={<CourseContent courseData={courseData.module10} module={"module10"} />} />
-        <Route path="/Java/module11" element={<CourseContent courseData={courseData.module11} module={"module11"} />} />
-        <Route path="/Java/module12" element={<CourseContent courseData={courseData.module12} module={"module12"} />} />
-        <Route path="/Java/module13" element={<CourseContent courseData={courseData.module13} module={"module13"} />} />
-        <Route path="/Java/module14" element={<CourseContent courseData={courseData.module14} module={"module14"} />} />
-        <Route path="/Java/module15" element={<CourseContent courseData={courseData.module15} module={"module15"} />} />
-        <Route path="/Java/module16" element={<CourseContent courseData={courseData.module16} module={"module16"} />} />
-
-        <Route path="/practise/" element={<Practise />} />
-        <Route path="/practise/project1" element={<CourseContent courseData={courseData.project1} module={"project1"} />} />
-        <Route path="/practise/project2" element={<CourseContent courseData={courseData.project2} module={"project2"} />} />
-        <Route path="/practise/project3" element={<CourseContent courseData={courseData.project3} module={"project3"} />} />
-        <Route path="/practise/project4" element={<CourseContent courseData={courseData.project4} module={"project4"} />} />
-        <Route path="/practise/project5" element={<CourseContent courseData={courseData.project5} module={"project5"} />} />
-
-        <Route path="/learning/" element={<Learning />} />
-        
-        <Route path="/join/" element={<Join />} />
+        <Route path='/jelentkezes/' element={<Form />} />
+        <Route path='/csomagok/' element={<Packages />} />
+        <Route path='/blog/' element={<Blog />} />
+        <Route path='/blog/:shortName' element={<BlogPost />}/>
+        <Route path='/impresszum/' element={<Impresszum />}/>
       </Routes>
       <Footer />
     </>

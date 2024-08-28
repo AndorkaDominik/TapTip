@@ -38,19 +38,18 @@ const Navbar = () => {
             {!isNavOpen && <FaBars className="menu-btn" onClick={showNavbar} />}
             {isNavOpen && <FaTimes className="menu-btn" onClick={showNavbar} />}
                 <ul className={isNavOpen ? 'show' : ''} ref={navRef}>
-                    <Link to={"/"} onClick={handleLinkClick}><li>Home</li></Link>
-                    <Link to={"/Java/"} onClick={handleLinkClick}><li>Course</li></Link>
-                    <Link to={"/practise/"} onClick={handleLinkClick}><li>Practise</li></Link>
-                    <Link to={"/learning/"} onClick={handleLinkClick}><li>My Learning</li></Link>
-                    <Link to={"/join/"} onClick={handleLinkClick}><li>Join Us</li></Link>
+                    <Link to={"/"} onClick={handleLinkClick}><li>Főoldal</li></Link>
+                    <Link to={"/jelentkezes/"} onClick={handleLinkClick}><li>Jelentkezés</li></Link>
+                    <Link to={"/csomagok/"} onClick={handleLinkClick}><li>Csomagok</li></Link>
+                    <Link to={"/blog/"} onClick={handleLinkClick}><li>Blog</li></Link>
                     <div className="under768px">
                         {/* <img src={profilePicture} className='profilePicture' alt="" /> */}
-                        <Link to="/Java/" className="cta" onClick={handleLinkClick}>Get Started</Link>
+                        <Link to="/jelentkezes/" className="cta" onClick={handleLinkClick}>Jelentkezés</Link>
 
                     </div>
                 </ul>
                 <div className="nav-right over768px">
-                    <Link to="/Java/" className="cta" onClick={handleLinkClick}>Get Started</Link>
+                    <Link to="/jelentkezes/" className="cta" onClick={handleLinkClick}>Jelentkezés</Link>
                     {/* <img src={profilePicture} className='profilePicture' alt="" /> */}
                 </div>
                 
