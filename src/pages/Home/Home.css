@@ -359,6 +359,21 @@
         margin: 0 auto;
     }
 
+    .cookie-consent-banner{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        top: 30%;
+        left: 10%;
+        width: 80%;
+        bottom: unset;
+    }
+
+    .cookie-consent-banner button{
+        margin-left: 0;
+    }
+
 }
 
 @media (max-width: 470px) {
