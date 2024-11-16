@@ -8,7 +8,9 @@
 
 :root {
   /* --color-primary: #88ce83; */
-  --color-primary: #499c43;
+  /* --color-primary: #499c43; */
+  /* --color-primary: #84439c; */
+  --color-primary: #b4cb78;
   --color-secondary: hsl(217, 30%, 12%);
   --color-tertiary: hsl(214, 29%, 17%);
   --color-extra: hsl(225, 18%, 37%);
@@ -72,7 +74,8 @@ h2 span,
 h3 span,
 h4 span {
   /* background: -webkit-linear-gradient( #499c43, #499c43, #5382A1); */
-  background: -webkit-linear-gradient( #499c43, #499c43, #b1f08e);
+  /* background: -webkit-linear-gradient( #499c43, #499c43, #b1f08e); */
+  background: -webkit-linear-gradient( #b4cb78, #96bf30, #2a7105);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -2,7 +2,8 @@
 import React from 'react';
 import { FaDiscord } from 'react-icons/fa';
 import './Footer.css';
-import logo from "../../assets/logo.svg";
+// import logo from "../../assets/logo.svg";
+import logo from "../../assets/bottom.png";
 import { Link } from 'react-router-dom';
 import { IoLogoGithub } from "react-icons/io";
 
@@ -21,7 +22,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
             <img src={logo} alt="" className='logo' width={180} />
-            <h1>TápTipp</h1>
+            {/* <h1>TápTipp</h1> */}
         </div>
         <div className="footer-section">
           <h3>Linkek</h3>
